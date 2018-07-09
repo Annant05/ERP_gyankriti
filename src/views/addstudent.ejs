@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" href="http://gyankriti.com/en/home/" hreflang="en"/>
+    <link rel="alternate" href="http://gyankriti.com/hi/home-hi/" hreflang="hi"/>
+    <link rel="alternate" href="http://gyankriti.com/" hreflang="x-default"/>
+    <link rel="icon" href="http://gyankriti.com/wp-content/uploads/2018/03/logo-100x100.png" sizes="32x32"/>
+    <link rel="icon" href="http://gyankriti.com/wp-content/uploads/2018/03/logo.png" sizes="192x192"/>
+
+    <title>Gyankriti </title>
+
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
+    <script type="text/javascript">
+        AWS.config.update({
+            region: "us-east-1",
+            // The endpoint should point to the local or remote computer where DynamoDB (downloadable) is running.
+            endpoint: 'https://dynamodb.us-east-1.amazonaws.com',
+            /*
+              accessKeyId and secretAccessKey defaults can be used while using the downloadable version of DynamoDB.
+              For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
+            */
+            accessKeyId: "getkey",
+            secretAccessKey: "getkey"
+        });
+
+        var dynamodb = new AWS.DynamoDB();
+        var docClient = new AWS.DynamoDB.DocumentClient();
+
+        function createGyankriti() {
+            var params = {
+                TableName: "gyankriti",
+                AttributeDefinitions: [
+                    {AttributeName: "rollno", AttributeType: "S"},
+                    {AttributeName: "name", AttributeType: "S"},
+                ],
+                KeySchema: [
+                    {AttributeName: "rollno", KeyType: "HASH"},
+                    {AttributeName: "name", KeyType: "RANGE"},
+                ],
+
+                ProvisionedThroughput: {
+                    ReadCapacityUnits: 5,
+                    WriteCapacityUnits: 5
+                }
+            };
+
+            dynamodb.createTable(params, function (err, data) {
+                if (err) {
+                    document.getElementById('textarea').innerHTML = "Unable to create table: " + "\n" + JSON.stringify(err, undefined, 2);
+                } else {
+                    document.getElementById('textarea').innerHTML = "Created table: " + "\n" + JSON.stringify(data, undefined, 2);
+                }
+            });
+        }
+
+
+        function createstudent() {
+            var rollno = document.getElementById('stud_rollno').value;
+            var name = document.getElementById('stud_name').value;
+            var gender = document.getElementById('stud_gender').value;
+            var s_class = document.getElementById('stud_class').value;
+            // alert(rollno + " " + name + " "+ gender + " " + s_class );
+            var params = {
+                TableName: "gyankriti",
+                Item: {
+                    "rollno": rollno,
+                    "name": name,
+                    "gender": gender,
+                    "class": s_class
+                }
+            };
+            //alert(JSON.stringify(params));
+
+            docClient.put(params, function (err, data) {
+                if (err) {
+                    document.getElementById('textarea').innerHTML = "Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2);
+                } else {
+                    document.getElementById('textarea').innerHTML = "PutItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+                }
+            });
+        }
+
+        function createMovies() {
+            var params = {
+                TableName: "Movies",
+                KeySchema: [
+                    {AttributeName: "year", KeyType: "HASH"},
+                    {AttributeName: "title", KeyType: "RANGE"}
+                ],
+                AttributeDefinitions: [
+                    {AttributeName: "year", AttributeType: "N"},
+                    {AttributeName: "title", AttributeType: "S"}
+                ],
+                ProvisionedThroughput: {
+                    ReadCapacityUnits: 5,
+                    WriteCapacityUnits: 5
+                }
+            };
+
+            dynamodb.createTable(params, function (err, data) {
+                if (err) {
+                    document.getElementById('textarea').innerHTML = "Unable to create table: " + "\n" + JSON.stringify(err, undefined, 2);
+                } else {
+                    document.getElementById('textarea').innerHTML = "Created table: " + "\n" + JSON.stringify(data, undefined, 2);
+                }
+            });
+        }
+
+
+        // var dynamodb = new AWS.DynamoDB();
+        // var docClient = new AWS.DynamoDB.DocumentClient();
+        //
+        //         function createItem() {
+        //             // var params = {
+        //             //     TableName: "gyankriti",
+        //             //     Item: {
+        //             //         "stud_rollno": "GK01"
+        //             //     }
+        //             // };
+        // //            docClient.put(params, function (err, data) {
+        //                 if (err) {
+        //                     alert("Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2));
+        //                 } else {
+        //                     alert("Succed  " + "\n" + JSON.stringify(err, undefined, 2));
+        //                 }
+        //   //          });
+        //         }
+
+    </script>
+
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index.html" class="site_title"><img
+                            src="http://gyankriti.com/wp-content/uploads/2018/03/logo.png" alt="Gyankriti Logo"
+                            height="50" width="50" style="margin-right: 20px"> <span>Gyankriti</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_pic">
+                        <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                        <span>Welcome,</span>
+                        <h2>John Doe</h2>
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br/>
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-home"></i> Student <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="addstudent.html">Add Student</a></li>
+                                    <li><a href="form.html">Show Students</a></li>
+                                    <li><a href="form.html">Fee Status</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li><a><i class="fa fa-desktop"></i> Staff <span
+                                    class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="form.html">Add Staff</a></li>
+                                    <li><a href="form.html">Show Staff</a></li>
+                                    <li><a href="form.html">Attendence</a></li>
+                                    <li><a href="form.html">Payroll Status</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li><a><i class="fa fa-edit"></i> Transport <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="form.html">Route</a></li>
+                                    <li><a href="form.html">Drivers</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+                <a data-toggle="tooltip" data-placement="top" title="Settings">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                    <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Lock">
+                    <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- /menu footer buttons -->
+        </div>
+    </div>
+
+    <!-- top navigation -->
+    <div class="top_nav">
+        <div class="nav_menu">
+            <nav>
+                <div class="nav toggle">
+                    <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                           aria-expanded="false">
+                            <img src="../images/img.jpg" alt="">John Doe
+                            <span class=" fa fa-angle-down"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-usermenu pull-right">
+                            <li><a href="javascript:;"> Profile</a></li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span class="badge bg-red pull-right">50%</span>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li><a href="javascript:;">Help</a></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="presentation" class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-green">6</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- top navigation  end -->
+
+
+    <!-- Form Start -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Add Student</h3>
+                </div>
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2><b>About Student</b></h2>
+                        <div class="clearfix"></div>
+                    </div>
+
+
+                    <!-- Internal Form   -->
+                    <div class="x_content">
+                        <br/>
+
+
+                        <form class="form-horizontal form-label-left input_mask" id="stud_form" method="post">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="stud_rollno"
+                                       placeholder="Roll no">
+                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control" id="stud_name"
+                                       placeholder="Name">
+
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="stud_gender"
+                                       placeholder="Gender">
+                                <span class="fa fa-envelope form-control-feedback left"
+                                      aria-hidden="true"></span>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="stud_class"
+                                       placeholder="Class">
+                                <span class="fa fa-phone form-control-feedback left"
+                                      aria-hidden="true"></span>
+                            </div>
+
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                    <button type="button" class="btn btn-primary">Cancel</button>
+                                    <button class="btn btn-primary" type="reset">Reset</button>
+                                    <button type="button" class="btn btn-success"
+                                            onclick="createstudent();alert('click');">Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <textarea readonly id="textarea" style="width:400px; height:500px"></textarea>
+    </div>
+    <!-- Form Start -->
+
+</div>
+
+
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="../vendors/iCheck/icheck.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="../vendors/moment/min/moment.min.js"></script>
+<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="../vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="../vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="../vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="../vendors/starrr/dist/starrr.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+</body>
+</html>

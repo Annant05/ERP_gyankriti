@@ -1,0 +1,12 @@
+1. Students
+     -> admission
+     -> show students
+     -> search a student
+     -> fee
+2. Transport
+     -> Routes
+     -> Drivers
+3. Staff
+     -> Attendance
+     -> payroll
+     -> salary slip print option
