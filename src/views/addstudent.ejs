@@ -314,6 +314,11 @@
                     </div>
 
 
+<!--//TODO: Columns needed are First Name , Last name  , Gender , Standard , Section , Van Route, DOB() ,Residential address() -->
+<!--// TODO : Father's Name , Mother's Name , Father's Mobile no , Mother's Mobile no ,Father's Email ID, Mother's Email Id , Residential address()  -->
+<!--// TODO :  Date of Admission (Auto generate),Username(Auto Generate), enrollment(Auto Generate),Registered Email id(Auto Generate)             -->
+
+
                     <!-- Internal Form   -->
                     <div class="x_content">
                         <br/>
@@ -322,19 +327,19 @@
                         <form class="form-horizontal form-label-left input_mask" id="stud_form" method="post">
 
                             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" id="stud_rollno"
+                                <input type="text" class="form-control has-feedback-left" id="stud_rollno" name="student[rollno]"
                                        placeholder="Roll no">
                                 <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input type="text" class="form-control" id="stud_name"
+                                <input type="text" class="form-control" id="stud_name" name="student[name]"
                                        placeholder="Name">
 
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" id="stud_gender"
+                                <input type="text" class="form-control has-feedback-left" id="stud_gender" name="student[gender]"
                                        placeholder="Gender">
                                 <span class="fa fa-envelope form-control-feedback left"
                                       aria-hidden="true"></span>
@@ -352,9 +357,8 @@
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                     <button type="button" class="btn btn-primary">Cancel</button>
                                     <button class="btn btn-primary" type="reset">Reset</button>
-                                    <button type="button" class="btn btn-success"
-                                            onclick="createstudent();alert('click');">Submit
-                                    </button>
+                                    <submit type="submit" class="btn btn-success" >Submit
+                                    </>
                                 </div>
                             </div>
                         </form>
