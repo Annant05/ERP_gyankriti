@@ -37,126 +37,6 @@
     <!-- Custom Theme Style -->
     <link href="/css/custom.min.css" rel="stylesheet">
 
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
-
-    <script type="text/javascript">
-        AWS.config.update({
-            region: "us-east-1",
-            // The endpoint should point to the local or remote computer where DynamoDB (downloadable) is running.
-            endpoint: 'https://dynamodb.us-east-1.amazonaws.com',
-            /*
-              accessKeyId and secretAccessKey defaults can be used while using the downloadable version of DynamoDB.
-              For security reasons, do not store AWS Credentials in your files. Use Amazon Cognito instead.
-            */
-            accessKeyId: "getkey",
-            secretAccessKey: "getkey"
-        });
-
-        var dynamodb = new AWS.DynamoDB();
-        var docClient = new AWS.DynamoDB.DocumentClient();
-
-        function createGyankriti() {
-            var params = {
-                TableName: "gyankriti",
-                AttributeDefinitions: [
-                    {AttributeName: "rollno", AttributeType: "S"},
-                    {AttributeName: "name", AttributeType: "S"},
-                ],
-                KeySchema: [
-                    {AttributeName: "rollno", KeyType: "HASH"},
-                    {AttributeName: "name", KeyType: "RANGE"},
-                ],
-
-                ProvisionedThroughput: {
-                    ReadCapacityUnits: 5,
-                    WriteCapacityUnits: 5
-                }
-            };
-
-            dynamodb.createTable(params, function (err, data) {
-                if (err) {
-                    document.getElementById('textarea').innerHTML = "Unable to create table: " + "\n" + JSON.stringify(err, undefined, 2);
-                } else {
-                    document.getElementById('textarea').innerHTML = "Created table: " + "\n" + JSON.stringify(data, undefined, 2);
-                }
-            });
-        }
-
-
-        function createstudent() {
-            var rollno = document.getElementById('stud_rollno').value;
-            var name = document.getElementById('stud_name').value;
-            var gender = document.getElementById('stud_gender').value;
-            var s_class = document.getElementById('stud_class').value;
-            // alert(rollno + " " + name + " "+ gender + " " + s_class );
-            var params = {
-                TableName: "gyankriti",
-                Item: {
-                    "rollno": rollno,
-                    "name": name,
-                    "gender": gender,
-                    "class": s_class
-                }
-            };
-            //alert(JSON.stringify(params));
-
-            docClient.put(params, function (err, data) {
-                if (err) {
-                    document.getElementById('textarea').innerHTML = "Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2);
-                } else {
-                    document.getElementById('textarea').innerHTML = "PutItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
-                }
-            });
-        }
-
-        function createMovies() {
-            var params = {
-                TableName: "Movies",
-                KeySchema: [
-                    {AttributeName: "year", KeyType: "HASH"},
-                    {AttributeName: "title", KeyType: "RANGE"}
-                ],
-                AttributeDefinitions: [
-                    {AttributeName: "year", AttributeType: "N"},
-                    {AttributeName: "title", AttributeType: "S"}
-                ],
-                ProvisionedThroughput: {
-                    ReadCapacityUnits: 5,
-                    WriteCapacityUnits: 5
-                }
-            };
-
-            dynamodb.createTable(params, function (err, data) {
-                if (err) {
-                    document.getElementById('textarea').innerHTML = "Unable to create table: " + "\n" + JSON.stringify(err, undefined, 2);
-                } else {
-                    document.getElementById('textarea').innerHTML = "Created table: " + "\n" + JSON.stringify(data, undefined, 2);
-                }
-            });
-        }
-
-
-        // var dynamodb = new AWS.DynamoDB();
-        // var docClient = new AWS.DynamoDB.DocumentClient();
-        //
-        //         function createItem() {
-        //             // var params = {
-        //             //     TableName: "gyankriti",
-        //             //     Item: {
-        //             //         "stud_rollno": "GK01"
-        //             //     }
-        //             // };
-        // //            docClient.put(params, function (err, data) {
-        //                 if (err) {
-        //                     alert("Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2));
-        //                 } else {
-        //                     alert("Succed  " + "\n" + JSON.stringify(err, undefined, 2));
-        //                 }
-        //   //          });
-        //         }
-
-    </script>
-
 </head>
 
 <body class="nav-md">
@@ -166,8 +46,8 @@
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
                     <a href="index" class="site_title"><img
-                            src="http://gyankriti.com/wp-content/uploads/2018/03/logo.png" alt="Gyankriti Logo"
-                            height="50" width="50" style="margin-right: 20px"> <span>Gyankriti</span></a>
+                                src="http://gyankriti.com/wp-content/uploads/2018/03/logo.png" alt="Gyankriti Logo"
+                                height="50" width="50" style="margin-right: 20px"> <span>Gyankriti</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -201,7 +81,7 @@
 
 
                             <li><a><i class="fa fa-desktop"></i> Staff <span
-                                    class="fa fa-chevron-down"></span></a>
+                                            class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/form">Add Staff</a></li>
                                     <li><a href="/form">Show Staff</a></li>
@@ -314,63 +194,78 @@
                     </div>
 
 
-<!--//TODO: Columns needed are First Name , Last name  , Gender , Standard , Section , Van Route, DOB() ,Residential address() -->
-<!--// TODO : Father's Name , Mother's Name , Father's Mobile no , Mother's Mobile no ,Father's Email ID, Mother's Email Id , Residential address()  -->
-<!--// TODO :  Date of Admission (Auto generate),Username(Auto Generate), enrollment(Auto Generate),Registered Email id(Auto Generate)             -->
+                    <!--TODO: Columns needed are First Name (Done), Last name(Done)  , Gender(Done) , Standard(using dropdown) , Section (using dropdown), Van Route(using dropdown), DOB(make dropdown picker) ,Residential address(textfield) -->
+                    <!-- TODO : Father's Name , Mother's Name , Father's Mobile no , Mother's Mobile no ,Father's Email ID, Mother's Email Id , Residential address()  -->
+                    <!-- TODO :  Date of Admission (Auto generate),Username(Auto Generate), enrollment(Auto Generate),Registered Email id(Auto Generate)             -->
 
 
                     <!-- Internal Form   -->
                     <div class="x_content">
-                        <br/>
+                        <br>
+                        <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left"
+                              novalidate="">
 
-
-                        <form class="form-horizontal form-label-left input_mask" id="stud_form" method="post">
-
-                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" id="stud_rollno" name="student[rollno]"
-                                       placeholder="Roll no">
-                                <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First
+                                    Name <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" id="first-name" class="form-control col-md-7 col-xs-12" required>
+                                </div>
                             </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input type="text" class="form-control" id="stud_name" name="student[name]"
-                                       placeholder="Name">
 
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last
+                                    Name <span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" id="last-name" class="form-control col-md-7 col-xs-12" required>
+                                </div>
                             </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" id="stud_gender" name="student[gender]"
-                                       placeholder="Gender">
-                                <span class="fa fa-envelope form-control-feedback left"
-                                      aria-hidden="true"></span>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender * </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <p>
+                                        Male : <input type="radio" class="flat" name="gender" id="genderM" value="Male" checked="" required/>
+                                        Female : <input type="radio" class="flat" name="gender" id="genderF" value="Female" title="female"/>
+                                    </p>
+                                </div>
                             </div>
 
-                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input type="text" class="form-control has-feedback-left" id="stud_class"
-                                       placeholder="Class">
-                                <span class="fa fa-phone form-control-feedback left"
-                                      aria-hidden="true"></span>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span
+                                            class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input id="birthday"
+                                           class="date-picker form-control col-md-7 col-xs-12 "
+                                           required="required" type="text" data-parsley-id="16" title="birthday">
+                                </div>
                             </div>
+
 
                             <div class="ln_solid"></div>
                             <div class="form-group">
-                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                                    <button type="button" class="btn btn-primary">Cancel</button>
+                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                    <button class="btn btn-primary" type="button">Cancel</button>
                                     <button class="btn btn-primary" type="reset">Reset</button>
-                                    <submit type="submit" class="btn btn-success" >Submit
-                                    </>
+                                    <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
                             </div>
+
                         </form>
-
-
                     </div>
+                    <!--End internal form-->
                 </div>
             </div>
         </div>
-        <textarea readonly id="textarea" style="width:400px; height:500px"></textarea>
     </div>
-    <!-- Form Start -->
+</div>
+<!-- Form Start -->
 
 </div>
 

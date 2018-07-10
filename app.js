@@ -47,9 +47,9 @@ app.post('/add-student', function (req, res) {
 
 
 
-app.listen(process.env.PORT,process.env.IP,function(err){
+app.listen(  8032 /*process.env.PORT*/ ,/*process.env.IP,*/ function(err){
     if(err) console.log("There was some problem in starting the server  : " +  JSON.stringify(err,undefined,2));
-    else    console.log('server started on port : ' + process.env.PORT + '  and  ' + process.env.IP);
+    else    console.log('server started on port : ' + "8032"  /*process.env.PORT + '  and  ' + process.env.IP*/);
 });
 
 // app.listen(8032, function (err) {
