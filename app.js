@@ -31,8 +31,22 @@ app.get('/form', function (req, res) {
 });
 
 app.post('/add-student', function (req, res) {
-    console.log(req.body.user.rollno);
-    console.log(req.body.user.name);
+    console.log(req.body.student.firstname);
+    console.log(req.body.student.lastname);
+    // console.log(req.body.student.gender);
+    // console.log(req.body.student.dob);
+    //
+    // console.log("\n\n Father \n");
+    //
+    // console.log(req.body.father.name);
+    // console.log(req.body.father.email);
+    // console.log(req.body.father.mobile);
+    //
+    // console.log("\n\n mother \n");
+    // console.log(req.body.mother.name);
+    // console.log(req.body.mother.email);
+    // console.log(req.body.mother.mobile);
+
     res.end("got your data");
 });
 

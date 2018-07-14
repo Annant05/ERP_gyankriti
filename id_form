@@ -1,0 +1,17 @@
+-> Student
+done	-> first name
+done	-> last name
+done	-> gender '
+done	-> DOB
+	-> Section
+	-> Van route
+	-> Address
+
+-> Father 
+done	-> Full Name
+done	-> Mobile no
+done	-> Email ID
+-> Mother
+	-> Full Name 
+	-> Mobile no
+	-> Email ID 
