@@ -1,6 +1,8 @@
 var express = require("express"),
     app = express();
 
+const dynamo = require("./dynamojs.js");
+
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({
     extended: true
@@ -47,7 +49,23 @@ app.post('/add-student', function (req, res) {
     console.log(req.body.mother.email);
     console.log(req.body.mother.mobile);
 
+    const s_fname = req.body.student.firstname;
+    const s_lname = req.body.student.lastname;
+    const s_gender = req.body.student.gender;
+    const s_dob = req.body.student.dob;
+
+    const f_name = req.body.father.name;
+    const f_email = req.body.father.email;
+    const f_mobileno = req.body.father.mobile;
+
+    const m_name = req.body.mother.name;
+    const m_email = req.body.mother.email;
+    const m_mobileno = req.body.mother.mobile;
+
     res.end("got your data");
+
+    dynamo.putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobileno, m_name, m_email, m_mobileno);
+
 });
 
 
