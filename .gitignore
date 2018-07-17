@@ -1,2 +1,4 @@
 /node_modules/*
 node_modules/
+/code_ref/*
+code_ref/
