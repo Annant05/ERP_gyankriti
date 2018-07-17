@@ -1,10 +1,16 @@
-var express = require("express"),
-    app = express();
+// all requires and delclarations
+const express = require("express"),app = express(); // creating express server
+const dynamo = require("./dynamojs.js"); // access dynamodb.js file and its fucntions
+const request = require('request');//to get public ip of the ec2 server
+const bodyParser = require("body-parser");  // used bodyparser to get data from all the field in form 
 
-const dynamo = require("./dynamojs.js");
+// Declaration related to servers
+const PORT = 8080;
 
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({
+
+//Main body of the js file
+
+app.use(bodyParser.urlencoded({   
     extended: true
 }));
 app.use(bodyParser.json());
@@ -69,10 +75,19 @@ app.post('/add-student', function (req, res) {
 });
 
 
-app.listen(8032 /*process.env.PORT*/, /*process.env.IP,*/ function (err) {
-    if (err) console.log("There was some problem in starting the server  : " + JSON.stringify(err, undefined, 2));
-    else console.log('server started on port : ' + "8032"  /*process.env.PORT + '  and  ' + process.env.IP*/);
+request('http://169.254.169.254/latest/meta-data/public-ipv4', function (error, response, body) {
+    console.log('server staretd on ip:port : '+ body + ":" +PORT);
 });
+
+app.listen(PORT,function(err){
+    if(err) console.log("There was some problem in starting the server  : " +  JSON.stringify(err,undefined,2));
+    else    console.log('server started on port : ' + 8080 );
+});
+
+// app.listen(8032 /*process.env.PORT*/, /*process.env.IP,*/ function (err) {
+//     if (err) console.log("There was some problem in starting the server  : " + JSON.stringify(err, undefined, 2));
+//     else console.log('server started on port : ' + "8032"  /*process.env.PORT + '  and  ' + process.env.IP*/);
+// });
 
 // app.listen(8032, function (err) {
 //     console.log('Server started on port'   +  "  8032");
