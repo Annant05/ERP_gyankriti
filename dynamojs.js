@@ -14,6 +14,7 @@ AWS.config.update({
 
 const dynamodb = new AWS.DynamoDB();
 let datatoexport = "";
+const TableName = "students";
 
 function listtables() {
     const params = {};
@@ -36,26 +37,20 @@ function listtables() {
 function createTable() {
 
     const params = {
-        TableName: "gyankriti",
+        TableName: TableName,
         AttributeDefinitions: [
             {
                 AttributeName: "rollno",
                 AttributeType: "S"
             },
-            {
-                AttributeName: "name",
-                AttributeType: "S"
-            }
+
         ],
         KeySchema: [
             {
                 AttributeName: "rollno",
                 KeyType: "HASH"
             },
-            {
-                AttributeName: "name",
-                KeyType: "RANGE"
-            }
+
         ],
         ProvisionedThroughput: {
             ReadCapacityUnits: 5,
@@ -75,9 +70,9 @@ function createTable() {
 
 function putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobileno, m_name, m_email, m_mobileno) {
     const time = (Math.round((new Date()).getTime() / 1000)).toString();
-    const rollno = "GK0010";
+    const rollno = "GK01" + time;
     const params = {
-        TableName: "gyankriti",
+        TableName: TableName,
         Item: {
             "rollno": {S: rollno},
             "name": {S: s_fname},
@@ -95,14 +90,6 @@ function putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobile
         }
     };
 
-//     var params = {
-//     TableName: "gyankriti",
-//     Item: {
-//   "rollno"         :   "GK01002",
-//   "student_name"   :   "Annant Gupta",
-//   "father_name"    :   "Ashwin Gupta",
-//   "mother_name"    :   "Jagrati Gupta"  }
-//     };
 
     dynamodb.putItem(params, function (err, data) {
         if (err) console.log(err, err.stack); // an error occurred
@@ -115,13 +102,13 @@ listtables();
 function getAllStudents() {
     const params = {
         Limit: 3,
-        TableName: "gyankriti",
+        TableName: TableName,
     };
     dynamodb.scan(params, function (err, data) {
         if (err) console.log(err, err.stack); // an error occurred
         else {
-            datatoexport = data.Items[0].father_name.S;
-            console.log(data.Items[0].father_name.S);
+            datatoexport = JSON.stringify(data);
+            console.log(data.Items);
         }
         // let father = data.Items[0].father_name.S;
         // console.log("end\n");
@@ -138,7 +125,9 @@ function exportdata() {
 }
 
 
-// getAllStudents();
+// putstudent();
+getAllStudents();
+module.exports.createTable = createTable;
 module.exports.putstudent = putstudent; // export your function
 module.exports.getAllStudents = getAllStudents; // export your function
 module.exports.exportdata = exportdata;
