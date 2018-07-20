@@ -23,29 +23,20 @@
     <link href="/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- popup -->
+    <link href="/popups/css/popupS.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="/css/custom.min.css" rel="stylesheet">
-    <style type="text/css">
-        .iCheck-helper-mine {
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            display: block;
-            width: 100%;
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-            background: rgb(255, 255, 255);
-            border: 0px;
-            opacity: 0;
-        }
-    </style>
 
 </head>
 
@@ -90,7 +81,8 @@
                             </li>
 
 
-                            <li><a><i class="fa fa-desktop"></i> Staff <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-desktop"></i> Staff <span
+                                            class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="#">Add Staff</a></li>
                                     <li><a href="#">Show Staff</a></li>
@@ -172,112 +164,10 @@
             </nav>
         </div>
     </div>
-    <!-- top navigation  end -->
 
-    <div class="right_col" role="main">
-        <div class="">
-            <div class="page-title">
-                <div class="title_left">
-                    <h3>Students</h3>
-                </div>
-
-                <div class="title_right">
-                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--page content start -->
-
-            <div class="col-sm-6">
-                <div id="datatable-checkbox_filter" class="dataTables_filter">
-                </div>
-            </div>
-            <p>
-                <% JSON.stringify(items[0]); %>
-            </p>
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <table id="datatable-checkbox"
-                           class="table table-striped table-bordered bulk_action dataTable no-footer"
-                           role="grid" aria-describedby="datatable-checkbox_info">
-                        <thead>
-                        <tr role="row">
-
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-checkbox"
-                                rowspan="1" colspan="1"
-                                aria-label="Salary: activate to sort column ascending"
-                                style="width: 140px;">Roll_No
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-checkbox"
-                                rowspan="1" colspan="1"
-                                aria-label="Name: activate to sort column ascending"
-                                style="width: 235px;">Name
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-checkbox"
-                                rowspan="1" colspan="1"
-                                aria-label="Position: activate to sort column ascending"
-                                style="width: 378px;">Gender
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-checkbox"
-                                rowspan="1" colspan="1"
-                                aria-label="Office: activate to sort column ascending"
-                                style="width: 179px;">DOB
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-checkbox"
-                                rowspan="1" colspan="1"
-                                aria-label="Age: activate to sort column ascending"
-                                style="width: 99px;">Father
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-checkbox"
-                                rowspan="1" colspan="1"
-                                aria-label="Start date: activate to sort column ascending"
-                                style="width: 175px;">Mother
-                            </th>
-                            <th tabindex="0"
-                                rowspan="1" colspan="1"
-                                aria-label="Action"
-                                style="width: 75px;">Action
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        <!--Dynamically show data here-->
-                        <% for (let item of items) { %>
-
-                        <tr role="row">
-
-                            <td><%= item.rollno.S %></td>
-                            <td><%= item.name.S %></td>
-                            <td><%= item.s_gender.S %></td>
-                            <td><%= item.s_dob.S %></td>
-                            <td><%= item.father_name.S %></td>
-                            <td><%= item.mother_name.S%></td>
-                            <td class=" last">
-                                <a href="#" onclick="alert('hello');">View</a>
-                            </td>
-                        </tr>
-                        <% } %>
-                        <!-- Dynamically show data end here-->
-                        
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!-- page content end -->
-    </div>
 </div>
 
+<!-- top navigation  end -->
 
 <!-- jQuery -->
 <script src="/jquery/dist/jquery.min.js"></script>
@@ -287,25 +177,33 @@
 <script src="/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
 <script src="/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- iCheck -->
 <script src="/iCheck/icheck.min.js"></script>
-<!-- Datatables -->
-<script src="/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="/jszip/dist/jszip.min.js"></script>
-<script src="/pdfmake/build/pdfmake.min.js"></script>
-<script src="/pdfmake/build/vfs_fonts.js"></script>
-
+<!-- bootstrap-daterangepicker -->
+<script src="/moment/min/moment.min.js"></script>
+<script src="/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="/starrr/dist/starrr.js"></script>
+<!-- popup js-->
+<script src="/popups/dist/popupS.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="/js/custom.min.js"></script>
 

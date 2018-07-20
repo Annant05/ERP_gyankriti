@@ -15,3 +15,28 @@
     </tr>
     <% } %>
 </table>
+
+
+
+
+
+                        <p>
+                            <% JSON.stringify(items); %>
+                        </p>
+                        <!--Dynamically show data here-->
+                        <% for (let i in items) { %>
+
+                        <tr role="row">
+
+                            <td><%= (items.rollno) %></td>
+                            <!--<td><%= items.rollno %></td>-->
+                            <!--<td><%= items.rollno %></td>-->
+                            <!--<td><%= items.rollno %></td>-->
+                            <!--<td><%= items.rollno %></td>-->
+                            <!--<td><%= items.rollno %></td>-->
+                            <td class=" last">
+                                <a href="#" onclick="alert('hello');">View</a>
+                            </td>
+                        </tr>
+                        <% } %>
+                         <!-- Dynamically show data end here-->

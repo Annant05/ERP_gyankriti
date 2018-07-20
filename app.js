@@ -9,7 +9,6 @@ const PORT = 8080;
 
 
 //Main body of the js file
-
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -31,9 +30,6 @@ app.get('/index', function (req, res) {
     res.render('index');
 });
 
-app.get('/add-student', function (req, res) {
-    res.render('addstudent');
-});
 app.get('/form', function (req, res) {
     res.render('form');
 });
@@ -42,29 +38,12 @@ app.get('/add-student', function (req, res) {
 });
 
 app.get('/show-students', function (req, res) {
-    //dynamo.getAllStudents();
-    //console.log(JSON.stringify(data));
-
     let data = dynamo.exportdata();
-    res.render('showstudents', {items: data});
+    console.log(data.Items);
+    res.render('showstudents', {items: data.Items});
 });
 
 app.post('/add-student', function (req, res) {
-    console.log(req.body.student.firstname);
-    console.log(req.body.student.lastname);
-    console.log(req.body.student.gender);
-    console.log(req.body.student.dob);
-
-    console.log("\n Father \n");
-
-    console.log(req.body.father.name);
-    console.log(req.body.father.email);
-    console.log(req.body.father.mobile);
-
-    console.log("\n mother \n");
-    console.log(req.body.mother.name);
-    console.log(req.body.mother.email);
-    console.log(req.body.mother.mobile);
 
     const s_fname = req.body.student.firstname;
     const s_lname = req.body.student.lastname;
@@ -79,12 +58,9 @@ app.post('/add-student', function (req, res) {
     const m_email = req.body.mother.email;
     const m_mobileno = req.body.mother.mobile;
 
-    res.end("got your data");
-
     dynamo.putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobileno, m_name, m_email, m_mobileno);
-
+    res.end("Data enter");
 });
-
 
 request('http://169.254.169.254/latest/meta-data/public-ipv4', function (error, response, body) {
     console.log('server staretd on ip:port : ' + body + ":" + PORT);
@@ -95,12 +71,7 @@ app.listen(PORT, function (err) {
     else console.log('server started on port : ' + 8080);
 });
 
-// app.listen(8032 /*process.env.PORT*/, /*process.env.IP,*/ function (err) {
+// app.listen(8032 /*process.env.PORT*/, /*proce    ss.env.IP,*/ function (err) {
 //     if (err) console.log("There was some problem in starting the server  : " + JSON.stringify(err, undefined, 2));
 //     else console.log('server started on port : ' + "8032"  /*process.env.PORT + '  and  ' + process.env.IP*/);
-// });
-
-// app.listen(8032, function (err) {
-//     console.log('Server started on port'   +  "  8032");
-
 // });
