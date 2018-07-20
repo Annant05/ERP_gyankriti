@@ -101,14 +101,13 @@ listtables();
 
 function getAllStudents() {
     const params = {
-        Limit: 3,
+        Limit: 10,
         TableName: TableName,
     };
     dynamodb.scan(params, function (err, data) {
         if (err) console.log(err, err.stack); // an error occurred
         else {
-            datatoexport = JSON.stringify(data);
-            console.log(data.Items);
+            datatoexport = (data);
         }
         // let father = data.Items[0].father_name.S;
         // console.log("end\n");
@@ -120,13 +119,12 @@ function getAllStudents() {
 
 function exportdata() {
     getAllStudents();
-    console.log("in export " + datatoexport + "Is the data");
     return datatoexport;
 }
 
 
 // putstudent();
-getAllStudents();
+// getAllStudents();
 module.exports.createTable = createTable;
 module.exports.putstudent = putstudent; // export your function
 module.exports.getAllStudents = getAllStudents; // export your function
