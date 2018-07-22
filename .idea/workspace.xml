@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5db06ce-1dcf-4eeb-a58d-66d16d6531fb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/basetemplate.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/Gruntfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/css/popupS.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/css/popupS.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/dist/popupS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/dist/popupS.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/src/css.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/src/defaults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/src/dom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/src/prototype.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/src/transition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendors/popups/src/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_ref/tableloop.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code_ref/tableloop.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dynamojs.js" beforeDir="false" afterPath="$PROJECT_DIR$/dynamojs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/addstudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/addstudent.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/showstudents.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/showstudents.ejs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +19,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="42" column="49" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="49" />
+            <state relative-caret-position="313">
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
@@ -51,8 +28,11 @@
       <file leaf-file-name="dynamojs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dynamojs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+            <state relative-caret-position="395">
+              <caret line="109" column="48" lean-forward="true" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+              <folding>
+                <element signature="n#!!block;n#createTable#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,8 +40,12 @@
       <file leaf-file-name="showstudents.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/showstudents.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="270" column="24" selection-start-line="270" selection-start-column="24" selection-end-line="270" selection-end-column="24" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +53,8 @@
       <file leaf-file-name="tableloop.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code_ref/tableloop.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="41" selection-end-column="63" />
+            <state relative-caret-position="330">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="41" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -81,12 +65,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="EJS file" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>../build/</find>
       <find>../</find>
       <find>css</find>
       <find>../images/</find>
@@ -111,6 +95,12 @@
       <find>tig</find>
       <find>button</find>
       <find>MINE</find>
+      <find>search</find>
+      <find>searc</find>
+      <find>view</find>
+      <find>dt-responsive</find>
+      <find>dt-responsive</find>
+      <find>dt-re</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -131,6 +121,11 @@
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -148,9 +143,10 @@
         <option value="$PROJECT_DIR$/code_ref/junk.html.ejs" />
         <option value="$PROJECT_DIR$/code_ref/junkcode.html" />
         <option value="$PROJECT_DIR$/src/views/addstudent.ejs" />
-        <option value="$PROJECT_DIR$/dynamojs.js" />
         <option value="$PROJECT_DIR$/code_ref/tableloop.txt" />
+        <option value="$PROJECT_DIR$/thatcancallinappjs.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/dynamojs.js" />
         <option value="$PROJECT_DIR$/src/views/showstudents.ejs" />
       </list>
     </option>
@@ -315,7 +311,10 @@
       <workItem from="1532089223188" duration="3028000" />
       <workItem from="1532092701171" duration="8852000" />
       <workItem from="1532107490426" duration="6226000" />
-      <workItem from="1532114318256" duration="1329000" />
+      <workItem from="1532114318256" duration="2285000" />
+      <workItem from="1532181931634" duration="679000" />
+      <workItem from="1532272713965" duration="1052000" />
+      <workItem from="1532276934162" duration="5443000" />
     </task>
     <task id="LOCAL-00001" summary="bug in get data from form">
       <created>1531549814826</created>
@@ -345,11 +344,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531896342434</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="show student dynamically shows data.">
+      <created>1532115727637</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532115727637</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50040000" />
+    <option name="totallyTimeSpent" value="58170000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,6 +373,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.11544544" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5002636" side_tool="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49973643" weight="0.32897604" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3278867" />
       <window_info id="npm" order="2" sideWeight="0.50108933" side_tool="true" weight="0.13020559" />
@@ -384,7 +391,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,27 +430,15 @@
     <MESSAGE value="bug fixed. Data is displayed in console." />
     <MESSAGE value="new function to getdata from dynamo db working. Need to make js synchronus so that there is enough time to fetch and assign data. Need understanding of node js." />
     <MESSAGE value="table name changed from gynakriti to students. primary key successfully implemented. Data fetch complete with limit." />
-    <option name="LAST_COMMIT_MESSAGE" value="table name changed from gynakriti to students. primary key successfully implemented. Data fetch complete with limit." />
+    <MESSAGE value="show student dynamically shows data." />
+    <option name="LAST_COMMIT_MESSAGE" value="show student dynamically shows data." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/form.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/menuitems.txt" />
-    <entry file="file://$PROJECT_DIR$/src/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -632,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/custom.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret column="4725" selection-start-column="4725" selection-end-column="4725" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/basetemplate.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1890">
@@ -683,29 +670,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code_ref/tableloop.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="41" selection-end-column="63" />
+        <state relative-caret-position="330">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="41" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/tables.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="244" column="16" selection-start-line="244" selection-start-column="16" selection-end-line="244" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thatcancallinappjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="42" column="49" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="49" />
+        <state relative-caret-position="313">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamojs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+        <state relative-caret-position="395">
+          <caret line="109" column="48" lean-forward="true" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!block;n#createTable#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/custom.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret column="9836" selection-start-column="9836" selection-end-column="9836" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/showstudents.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="270" column="24" selection-start-line="270" selection-start-column="24" selection-end-line="270" selection-end-column="24" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -21,16 +21,6 @@ function listtables() {
     dynamodb.listTables(params, function (err, data) {
         if (err) console.log(err, err.stack); // an error occurred
         else console.log(data);           // successful response
-        /*
-        data = {
-         TableNames: [
-            "Forum",
-            "ProductCatalog",
-            "Reply",
-            "Thread"
-         ]
-        }
-        */
     });
 }
 
@@ -40,7 +30,7 @@ function createTable() {
         TableName: TableName,
         AttributeDefinitions: [
             {
-                AttributeName: "rollno",
+                AttributeName: "rollno",  // Primary key
                 AttributeType: "S"
             },
 
@@ -99,6 +89,19 @@ function putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobile
 
 listtables();
 
+function usingCallback(callback) {
+    const params = {
+        Limit: 20,
+        TableName: TableName,
+    };
+    dynamodb.scan(params, function (err, data) {
+        if (err) console.log(err, err.stack); // an error occurred
+        else {
+            callback(err, data);
+        }
+    });
+}
+
 function getAllStudents() {
     const params = {
         Limit: 5,
@@ -109,16 +112,13 @@ function getAllStudents() {
         else {
             datatoexport = (data);
         }
-        // let father = data.Items[0].father_name.S;
-        // console.log("end\n");
-        // return father;
-        // return "\";
     });
 
 }
 
 function exportdata() {
     getAllStudents();
+    // setTimeout(getAllStudents(), 3000);
     return datatoexport;
 }
 
@@ -129,3 +129,4 @@ module.exports.createTable = createTable;
 module.exports.putstudent = putstudent; // export your function
 module.exports.getAllStudents = getAllStudents; // export your function
 module.exports.exportdata = exportdata;
+module.exports.usingCallback = usingCallback;

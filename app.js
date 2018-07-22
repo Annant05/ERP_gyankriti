@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");  // used bodyparser to get data from 
 // Declaration related to servers
 const PORT = 8080;
 
-
 //Main body of the js file
 app.use(bodyParser.urlencoded({
     extended: true
@@ -38,9 +37,11 @@ app.get('/add-student', function (req, res) {
 });
 
 app.get('/show-students', function (req, res) {
-    let data = dynamo.exportdata();
-    console.log(data.Items);
-    res.render('showstudents', {items: data.Items});
+
+    dynamo.usingCallback(function (req, data) {
+        console.log(data.Items[0].rollno);
+        res.render('showstudents', {items: data.Items});
+    });
 });
 
 app.post('/add-student', function (req, res) {
@@ -75,3 +76,12 @@ app.listen(PORT, function (err) {
 //     if (err) console.log("There was some problem in starting the server  : " + JSON.stringify(err, undefined, 2));
 //     else console.log('server started on port : ' + "8032"  /*process.env.PORT + '  and  ' + process.env.IP*/);
 // });
+
+console.log('Client-side code running');
+
+// const button = document.getElementById('viewbutti');
+// button.addEventListener('click', function(e) {
+//     console.log('button was clicked');
+// });
+
+// module.exports.clickFromShowStud = clickFromShowStud;
