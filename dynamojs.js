@@ -13,7 +13,6 @@ AWS.config.update({
 });
 
 const dynamodb = new AWS.DynamoDB();
-let datatoexport = "";
 const TableName = "students";
 
 function listtables() {
@@ -89,9 +88,9 @@ function putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobile
 
 listtables();
 
-function usingCallback(callback) {
+function getStudentsfromDB(callback) {
     const params = {
-        Limit: 20,
+        Limit: 3,
         TableName: TableName,
     };
     dynamodb.scan(params, function (err, data) {
@@ -102,31 +101,7 @@ function usingCallback(callback) {
     });
 }
 
-function getAllStudents() {
-    const params = {
-        Limit: 5,
-        TableName: TableName,
-    };
-    dynamodb.scan(params, function (err, data) {
-        if (err) console.log(err, err.stack); // an error occurred
-        else {
-            datatoexport = (data);
-        }
-    });
 
-}
-
-function exportdata() {
-    getAllStudents();
-    // setTimeout(getAllStudents(), 3000);
-    return datatoexport;
-}
-
-
-// putstudent();
-// getAllStudents();
 module.exports.createTable = createTable;
 module.exports.putstudent = putstudent; // export your function
-module.exports.getAllStudents = getAllStudents; // export your function
-module.exports.exportdata = exportdata;
-module.exports.usingCallback = usingCallback;
+module.exports.usingCallback = getStudentsfromDB;

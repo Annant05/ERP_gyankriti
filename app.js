@@ -39,12 +39,12 @@ app.get('/add-student', function (req, res) {
 app.get('/show-students', function (req, res) {
 
     dynamo.usingCallback(function (req, data) {
-        console.log(data.Items[0].rollno);
+        if(data) console.log(data.Items[0].rollno.S);else data.Items=null;
         res.render('showstudents', {items: data.Items});
     });
 });
 
-app.post('/add-student', function (req, res) {
+app.post('/add-student', function (req, res) { // this function can be optimised
 
     const s_fname = req.body.student.firstname;
     const s_lname = req.body.student.lastname;
@@ -64,7 +64,7 @@ app.post('/add-student', function (req, res) {
 });
 
 request('http://169.254.169.254/latest/meta-data/public-ipv4', function (error, response, body) {
-    console.log('server staretd on ip:port : ' + body + ":" + PORT);
+    console.log('server started on ip:port : ' + body + ":" + PORT);
 });
 
 app.listen(PORT, function (err) {
@@ -72,16 +72,4 @@ app.listen(PORT, function (err) {
     else console.log('server started on port : ' + 8080);
 });
 
-// app.listen(8032 /*process.env.PORT*/, /*proce    ss.env.IP,*/ function (err) {
-//     if (err) console.log("There was some problem in starting the server  : " + JSON.stringify(err, undefined, 2));
-//     else console.log('server started on port : ' + "8032"  /*process.env.PORT + '  and  ' + process.env.IP*/);
-// });
-
 console.log('Client-side code running');
-
-// const button = document.getElementById('viewbutti');
-// button.addEventListener('click', function(e) {
-//     console.log('button was clicked');
-// });
-
-// module.exports.clickFromShowStud = clickFromShowStud;

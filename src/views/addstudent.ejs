@@ -6,418 +6,238 @@
 <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="alternate" href="http://gyankriti.com/en/home/" hreflang="en"/>
-    <link rel="alternate" href="http://gyankriti.com/hi/home-hi/" hreflang="hi"/>
-    <link rel="alternate" href="http://gyankriti.com/" hreflang="x-default"/>
-    <link rel="icon" href="http://gyankriti.com/wp-content/uploads/2018/03/logo-100x100.png" sizes="32x32"/>
-    <link rel="icon" href="http://gyankriti.com/wp-content/uploads/2018/03/logo.png" sizes="192x192"/>
-
-    <title>Gyankriti </title>
-
-
-    <!-- Bootstrap -->
-    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
-    <!-- Select2 -->
-    <link href="/select2/dist/css/select2.min.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="/switchery/dist/switchery.min.css" rel="stylesheet">
-    <!-- starrr -->
-    <link href="/starrr/dist/starrr.css" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="/css/custom.min.css" rel="stylesheet">
-
+<head>
+    <% include partials/head.ejs %>
 </head>
-    <body class="nav-md">
-        <div class="container body">
-            <div class="main_container">
-                <div class="col-md-3 left_col">
-                    <div class="left_col scroll-view">
-                        <div class="navbar nav_title" style="border: 0;">
-                            <a href="index" class="site_title"><img
-                                        src="http://gyankriti.com/wp-content/uploads/2018/03/logo.png" alt="Gyankriti Logo"
-                                        height="50" width="50" style="margin-right: 20px"> <span>Gyankriti</span></a>
-                        </div>
-        
-                        <div class="clearfix"></div>
-        
-                        <!-- menu profile quick info -->
-                        <div class="profile clearfix">
-                            <div class="profile_pic">
-                                <img src="/images/img.jpg" alt="..." class="img-circle profile_img">
-                            </div>
-                            <div class="profile_info">
-                                <span>Welcome,</span>
-                                <h2>John Doe</h2>
-                            </div>
-                        </div>
-                        <!-- /menu profile quick info -->
-        
-                        <br/>
-        
-                        <!-- sidebar menu -->
-                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                            <div class="menu_section">
-                                <h3>General</h3>
-                                <ul class="nav side-menu">
-                                    <li><a><i class="fa fa-home"></i> Student <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li><a href="/add-student">Add Student</a></li>
-                                            <li><a href="/show-students">Show Students</a></li>
-                                            <li><a href="#">Fee Status</a></li>
-                                        </ul>
-                                    </li>
-        
-        
-                                    <li><a><i class="fa fa-desktop"></i> Staff <span
-                                                    class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li><a href="#">Add Staff</a></li>
-                                            <li><a href="#">Show Staff</a></li>
-                                            <li><a href="#">Attendence</a></li>
-                                            <li><a href="#">Payroll Status</a></li>
-                                        </ul>
-                                    </li>
-        
-        
-                                    <li><a><i class="fa fa-edit"></i> Transport <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li><a href="#">Route</a></li>
-                                            <li><a href="#">Drivers</a></li>
-                                        </ul>
-                                    </li>
-        
-                                </ul>
-                            </div>
-                        </div>
-        
-                    </div>
-                    <!-- /sidebar menu -->
-        
-                    <!-- /menu footer buttons -->
-                    <div class="sidebar-footer hidden-small">
-                        <a data-toggle="tooltip" data-placement="top" title="Settings">
-                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                        </a>
-                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                        </a>
-                        <a data-toggle="tooltip" data-placement="top" title="Lock">
-                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                        </a>
-                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <!-- /menu footer buttons -->
+<body class="nav-md">
+<div class="container body">
+    <% include partials/menuandtopnav.ejs %>
+
+    <!-- Form Start -->
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Admission</h3>
                 </div>
-            </div>
-        
-            <!-- top navigation -->
-            <div class="top_nav">
-                <div class="nav_menu">
-                    <nav>
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
-        
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="">
-                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    <img src="/images/img.jpg" alt="">John Doe
-                                    <span class=" fa fa-angle-down"></span>
-                                </a>
-                                <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                    <li><a href="javascript:;"> Profile</a></li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <span class="badge bg-red pull-right">50%</span>
-                                            <span>Settings</span>
-                                        </a>
-                                    </li>
-                                    <li><a href="javascript:;">Help</a></li>
-                                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                                </ul>
-                            </li>
-        
-                            <li role="presentation" class="dropdown">
-                                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
-                                   aria-expanded="false">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <span class="badge bg-green">6</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <!-- top navigation  end -->
-        
-        
-            <!-- Form Start -->
-            <div class="right_col" role="main">
-                <div class="">
-                    <div class="page-title">
-                        <div class="title_left">
-                            <h3>Add Student</h3>
-                        </div>
-        
-                        <div class="title_right">
-                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-btn">
+
+                <div class="title_right">
+                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
                               <button class="btn btn-default" type="button">Go!</button>
                             </span>
-                                </div>
-                            </div>
                         </div>
                     </div>
-        
-        
-                    <div class="row">
-                        <form id="stud_details" data-parsley-validate="" method="post" class="form-horizontal form-label-left"
-                              novalidate="">
-        
-                            <!-- Student details form start -->
-        
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2><b>About Student</b></h2>
-                                    <div class="clearfix"></div>
-                                </div>
-        
-        
-                                <!-- Internal Form   -->
-                                <div class="x_content">
-                                    <br>
-        
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="x_panel">
+                    <div class="x_content">
+                        <form id="stud_details" data-parsley-validate="" method="post"
+                              class="form-horizontal form-label-left" novalidate="">
+
+                            <!-- Smart Wizard -->
+                            <div id="wizard" class="form_wizard wizard_horizontal">
+                                <ul class="wizard_steps">
+                                    <li>
+                                        <a href="#step-1">
+                                            <span class="step_no">1</span>
+                                            <span class="step_descr">
+                                              Step 1<br/>
+                                              <small>Student Details</small>
+                                          </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#step-2">
+                                            <span class="step_no">2</span>
+                                            <span class="step_descr">
+                                              Step 2<br/>
+                                              <small>Father's Detail</small>
+                                          </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#step-3">
+                                            <span class="step_no">3</span>
+                                            <span class="step_descr">
+                                              Step 3<br/>
+                                              <small>Father's Detail</small>
+                                          </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#step-4">
+                                            <span class="step_no">4</span>
+                                            <span class="step_descr">
+                                              Step 4<br/>
+                                              <small>Admission Details</small>
+                                          </span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+
+                                <div id="step-1">
                                     <!-- Student details form end -->
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First
                                             Name <span class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="text" id="student-first-name" class="form-control col-md-7 col-xs-12"
+                                            <input type="text" id="student-first-name"
+                                                   class="form-control col-md-7 col-xs-12"
                                                    name="student[firstname]" required>
                                         </div>
                                     </div>
-        
-        
+
+
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last
                                             Name <span class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="text" id="student-last-name" class="form-control col-md-7 col-xs-12"
+                                            <input type="text" id="student-last-name"
+                                                   class="form-control col-md-7 col-xs-12"
                                                    name="student[lastname]" required>
                                         </div>
                                     </div>
-        
-        
+
+
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender * </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
                                             <p>
-                                                Male : <input type="radio" class="flat" name="student[gender]" id="genderM"
+                                                Male : <input type="radio" class="flat" name="student[gender]"
+                                                              id="genderM"
                                                               value="male"
                                                               title="male"/>
-                                                Female : <input type="radio" class="flat" name="student[gender]" id="genderF"
+                                                Female : <input type="radio" class="flat" name="student[gender]"
+                                                                id="genderF"
                                                                 value="female" title="female"/>
                                             </p>
                                         </div>
                                     </div>
-        
+
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12">DOB *</label>
-                                        <div class="control-group col-md-4 col-sm-4 col-xs-12">
-                                            <fieldset>
-                                                <div class="controls">
-                                                    <input type="text" class="form-control col-md-7  col-sm-7 col-xs-12"
-                                                           id="single_cal1" placeholder="" name="student[dob]"
-                                                           aria-describedby="inputSuccess2Status">
-                                                </div>
-                                            </fieldset>
+                                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                            <input type="date" class="col-md-7  col-sm-7 col-xs-12"
+                                                   name="student[dob]">
                                         </div>
                                     </div>
-        
-                                    <div class="ln_solid"></div>
-        
-        
                                     <!-- Student details form end -->
                                 </div>
-                                <!--End internal form-->
-                            </div>
-        
-        
-                            <!-- Father's Detail -->
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2><b>About Father</b></h2>
-                                    <div class="clearfix"></div>
-                                </div>
-        
-        
-                                <!-- Internal Form   -->
-                                <div class="x_content">
-                                    <br>
-        
+
+                                <div id="step-2">
+                                    <!-- Father's Detail -->
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="full-name">Name<span
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="full-name">Name<span
                                                     class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="text" id="father-name" class="form-control col-md-7 col-xs-12"
+                                            <input type="text" id="father-name"
+                                                   class="form-control col-md-7 col-xs-12"
                                                    name="father[name]" required>
                                         </div>
                                     </div>
-        
-        
+
+
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email
                                             address <span class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="email" id="father-email" class="form-control col-md-7 col-xs-12"
+                                            <input type="email" id="father-email"
+                                                   class="form-control col-md-7 col-xs-12"
                                                    name="father[email]" required>
                                         </div>
                                     </div>
-        
-        
+
+
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mobile-no">Mobile
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="mobile-no">Mobile
                                             No <span class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="number" maxlength="10" minlength="10" id="father-mobile"
-                                                   class="form-control col-md-7 col-xs-12" name="father[mobile]" required>
+                                            <input type="number" maxlength="10" minlength="10"
+                                                   id="father-mobile"
+                                                   class="form-control col-md-7 col-xs-12" name="father[mobile]"
+                                                   required>
                                         </div>
+
                                     </div>
-        
-        
-                                    <div class="ln_solid"></div>
+                                    <!-- end Father Detail -->
                                 </div>
-                            </div>
-                            <!-- end Father Detail -->
-        
-        
-                            <!-- Mother's Detail -->
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2><b>About Mother</b></h2>
-                                    <div class="clearfix"></div>
-                                </div>
-        
-        
-                                <!-- Internal Form   -->
-                                <div class="x_content">
-                                    <br>
-        
+
+                                <div id="step-3">
+                                    <!-- Mother's Detail -->
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mother-name">Name <span
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="mother-name">Name <span
                                                     class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="text" id="mother-name" class="form-control col-md-7 col-xs-12"
+                                            <input type="text" id="mother-name"
+                                                   class="form-control col-md-7 col-xs-12"
                                                    name="mother[name]" required>
                                         </div>
                                     </div>
-        
-        
+
+
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Email
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="last-name">Email
                                             address <span class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="email" id="mother-email" class="form-control col-md-7 col-xs-12"
+                                            <input type="email" id="mother-email"
+                                                   class="form-control col-md-7 col-xs-12"
                                                    name="mother[email]" required>
                                         </div>
                                     </div>
-        
-        
+
+
                                     <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Mobile
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                               for="last-name">Mobile
                                             No <span class="required">*</span>
                                         </label>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
-                                            <input type="number" maxlength="10" minlength="10" id="mother-mobile"
-                                                   class="form-control col-md-7 col-xs-12" name="mother[mobile]" required>
+                                            <input type="number" maxlength="10" minlength="10"
+                                                   id="mother-mobile"
+                                                   class="form-control col-md-7 col-xs-12" name="mother[mobile]"
+                                                   required>
                                         </div>
                                     </div>
-        
-        
-                                    <div class="ln_solid"></div>
+                                    <!-- end Mother Detail -->
+                                </div>
+
+                                <div id="step-4">
+                                    <h2 class="StepTitle">Step 4 Content</h2>
+                                    <p>
+                                        show all the data along with autogenerated data.
+                                    </p>
                                 </div>
                             </div>
-                            <!-- end Mother Detail -->
-        
-        
-                            <div class="form-group">
-                                <div class="alignright col-lg-3">
-                                    <button type="submit" class="btn btn-success" value="submit">Submit</button>
-                                </div>
-                            </div>
-                        <#>
-        
+                        </form>
                     </div>
+                    <!-- Form End -->
+                    <!-- End SmartWizard Content -->
+
                 </div>
             </div>
         </div>
-        <!-- Form Start -->
-
-
-        <!-- jQuery -->
-        <script src="/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- FastClick -->
-        <script src="/fastclick/lib/fastclick.js"></script>
-        <!-- NProgress -->
-        <script src="/nprogress/nprogress.js"></script>
-        <!-- bootstrap-progressbar -->
-        <script src="/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-        <!-- iCheck -->
-        <script src="/iCheck/icheck.min.js"></script>
-        <!-- bootstrap-daterangepicker -->
-        <script src="/moment/min/moment.min.js"></script>
-        <script src="/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <!-- bootstrap-wysiwyg -->
-        <script src="/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-        <script src="/jquery.hotkeys/jquery.hotkeys.js"></script>
-        <script src="/google-code-prettify/src/prettify.js"></script>
-        <!-- jQuery Tags Input -->
-        <script src="/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-        <!-- Switchery -->
-        <script src="/switchery/dist/switchery.min.js"></script>
-        <!-- Select2 -->
-        <script src="/select2/dist/js/select2.full.min.js"></script>
-        <!-- Parsley -->
-        <script src="/parsleyjs/dist/parsley.min.js"></script>
-        <!-- Autosize -->
-        <script src="/autosize/dist/autosize.min.js"></script>
-        <!-- jQuery autocomplete -->
-        <script src="/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-        <!-- starrr -->
-        <script src="/starrr/dist/starrr.js"></script>
-        <!-- Custom Theme Scripts -->
-        <script src="/js/custom.min.js"></script>
-
-    </body>
+    </div>
+</div>
+<% include partials/jscripts.ejs %>
+<!-- jQuery Smart Wizard -->
+<script src="/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+</body>
 </html>
