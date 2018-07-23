@@ -48,7 +48,7 @@ app.post('/add-student', function (req, res) {
 
     const f_name = req.body.father.name;
     const f_email = req.body.father.email;
-    const f_mobileno = req.body.father.mobile;
+    const f_mobileno = req.body.father.mobile;  
 
     const m_name = req.body.mother.name;
     const m_email = req.body.mother.email;
@@ -63,9 +63,13 @@ app.post('/add-student', function (req, res) {
 
 
 app.get('/show-students', function (req, res) {
-    let data = dynamo.exportdata();
-    console.log(data.Items[0].rollno);
-    res.render('showstudents', {items: data.Items});
+    // let data = dynamo.exportdata();
+    // console.log(data.Items);
+
+    dynamo.usingCallback(function (req, data) {
+        console.log(data.Items[0].rollno);
+        res.render('showstudents', {items: data.Items});
+    });
 });
 
 
