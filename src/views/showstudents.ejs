@@ -16,7 +16,8 @@
     <% include partials/menuandtopnav.ejs %>
 
     <div class="right_col" role="main">
-        <div class="">
+        <div class="x_panel">
+
             <div class="page-title">
                 <div class="title_left">
                     <h3>Students</h3>
@@ -27,53 +28,49 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for...">
                             <span class="input-group-btn">
-                      <button class="btn btn-default" type="button" onclick="getcall();">Go!</button>
+                      <button class="btn btn-default" type="button"
+                              onclick="alert('searching fucntion under development');">Go!</button>
                     </span>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!--page content start -->
 
-
             <!--Table show start -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
-                           cellspacing="0" width="100%">
-                        <thead>
-                        <tr>
-                            <th>Roll No</th>
-                            <th>Name</th>
-                            <th>Gender</th>
-                            <th>DOB</th>
-                            <th>Father</th>
-                            <th>Mother</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+                   cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Enrollment</th>
+                    <th>Username</th>
+                    <th>Standard</th>
+                    <th>Bus Route</th>
+                    <th>Father's Contact</th>
+                    <th>Mother's Contact</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
 
-                        <% for (let item of items) { %>
-                        <tr role="row">
-                            <td><%= item.rollno.S %></td>
-                            <td><%= item.name.S + " " + item.stud_last_name.S %></td>
-                            <td><%= item.s_gender.S %></td>
-                            <td><%= item.s_dob.S %></td>
-                            <td><%= item.father_name.S %></td>
-                            <td><%= item.mother_name.S %></td>
-                            <td class=" last">
-                                <a href="#" id="viewbutton" type="button">View</a>
-                            </td>
-                        </tr>
-                        <% } %>
-                        <!-- Dynamically show data end here-->
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                <% for (let item of items) { %>
+                <tr role="row">
+                    <td><%= item.rollno.S %></td>
+                    <td><%= item.name.S + " " + item.stud_last_name.S %></td>
+                    <td><%= item.s_gender.S %></td>
+                    <td><%= item.s_dob.S %></td>
+                    <td><%= item.father_name.S %></td>
+                    <td><%= item.mother_name.S %></td>
+                    <td class=""><%= item.mother_name.S %></td>
+                    <td class=" last">
+                        <a onclick="alert('Under Development');" id="viewbutton" type="button">View</a>
+                    </td>
+                </tr>
+                <% } %>
+                <!-- Dynamically show data end here-->
+                </tbody>
+            </table>
         </div>
         <!--Table show start -->
         <!-- page content end -->

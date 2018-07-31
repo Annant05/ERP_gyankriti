@@ -32,16 +32,9 @@ app.get('/index', function (req, res) {
 app.get('/form', function (req, res) {
     res.render('form');
 });
+
 app.get('/add-student', function (req, res) {
     res.render('addstudent');
-});
-
-app.get('/show-students', function (req, res) {
-
-    dynamo.usingCallback(function (req, data) {
-        if(data) console.log(data.Items[0].rollno.S);else data.Items=null;
-        res.render('showstudents', {items: data.Items});
-    });
 });
 
 app.post('/add-student', function (req, res) { // this function can be optimised
@@ -62,6 +55,28 @@ app.post('/add-student', function (req, res) { // this function can be optimised
     dynamo.putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobileno, m_name, m_email, m_mobileno);
     res.end("Data enter");
 });
+
+
+app.get('/bus-routes', function (req, res) {
+    res.render('bus-routes');
+});
+
+app.get('/base-temp', function (req, res) {
+    res.render('base-temp');
+});
+
+app.get('/add-bus-route', function (req, res) {
+    res.render('add-bus-route');
+});
+
+app.get('/show-students', function (req, res) {
+
+    dynamo.usingCallback(function (req, data) {
+        if(data) console.log(data.Items[0].rollno.S);else data.Items=null;
+        res.render('showstudents', {items: data.Items});
+    });
+});
+
 
 request('http://169.254.169.254/latest/meta-data/public-ipv4', function (error, response, body) {
     console.log('server started on ip:port : ' + body + ":" + PORT);

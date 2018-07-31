@@ -86,7 +86,6 @@ function putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobile
     });
 }
 
-listtables();
 
 function getStudentsfromDB(callback) {
     const params = {
