@@ -39,21 +39,9 @@ app.get('/add-student', function (req, res) {
 
 app.post('/add-student', function (req, res) { // this function can be optimised
 
-    const s_fname = req.body.student.firstname;
-    const s_lname = req.body.student.lastname;
-    const s_gender = req.body.student.gender;
-    const s_dob = req.body.student.dob;
+    dynamo.addNewStudent(req);
+    res.end("Data enter, Student added");
 
-    const f_name = req.body.father.name;
-    const f_email = req.body.father.email;
-    const f_mobileno = req.body.father.mobile;
-
-    const m_name = req.body.mother.name;
-    const m_email = req.body.mother.email;
-    const m_mobileno = req.body.mother.mobile;
-
-    dynamo.putstudent(s_fname, s_lname, s_gender, s_dob, f_name, f_email, f_mobileno, m_name, m_email, m_mobileno);
-    res.end("Data enter");
 });
 
 
@@ -69,10 +57,17 @@ app.get('/add-bus-route', function (req, res) {
     res.render('add-bus-route');
 });
 
+app.post('/add-bus-route', function (req, res) {
+
+    dynamo.addBusRoute(req);
+    res.end("Data entered, bus route added");
+
+});
+
 app.get('/show-students', function (req, res) {
 
-    dynamo.usingCallback(function (req, data) {
-        if(data) console.log(data.Items[0].rollno.S);else data.Items=null;
+    dynamo.getStudents(function (req, data) {
+        if (data) console.log(data.Items[0].rollno.S); else data.Items = null;
         res.render('showstudents', {items: data.Items});
     });
 });

@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
     <% include partials/head.ejs %>
+    <style>
+        .no-spinner {
+            -moz-appearance: textfield;
+        }
+
+        .no-spinner::-webkit-outer-spin-button,
+        .no-spinner::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
 
 </head>
 <body class="nav-md">
@@ -12,13 +23,127 @@
         <!-- page content -->
         <div class="row">
             <div class="x_panel">
-                <h1 class="center"> Page is add bus route</h1>
+
+                <div class="x_title">
+                    <div class="page-title">
+                        <div class="title_left">
+                            <h3>Add Bus-route</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="x_content">
+                        <br/>
+                        <form class="form-horizontal form-label-left" method="post">
+
+                            <!-- Student details form end -->
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Bus/Route
+                                    No <span class="required">*</span>
+                                </label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="student-first-name"
+                                           class="form-control col-md-7 col-xs-12"
+                                           name="bus[route]" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Date of Registration*</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="date" class="col-md-7  col-sm-7 col-xs-12 no-spinner"
+                                           name="bus[date_registration]" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Insurance Renewal Date
+                                    *</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="date" class="col-md-7  col-sm-7 col-xs-12 no-spinner"
+                                           name="bus[date_insurance]" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Fitness Renewal Date*</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="date" class="col-md-7  col-sm-7 col-xs-12 no-spinner"
+                                           name="bus[date_fitness]" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Registration No*</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" name="bus[registration_no]" class="form-control"
+                                           data-inputmask="'mask': 'AA 99 AA 9999'">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Bus Driver<span
+                                            class="required">*</span>
+                                </label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="student-last-name"
+                                           class="form-control col-md-7 col-xs-12"
+                                           name="bus[driver]" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Bus
+                                    Conductor<span class="required">*</span>
+                                </label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="student-last-name"
+                                           class="form-control col-md-7 col-xs-12"
+                                           name="bus[conductor]" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Bus Area<span
+                                            class="required">*</span>
+                                </label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <input type="text" id="student-last-name"
+                                           class="form-control col-md-7 col-xs-12"
+                                           name="bus[area]" required>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                </label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                        <!-- Student details form end -->
+                    </div>
+                </div>
+                <!-- /page content -->
             </div>
         </div>
-        <!-- /page content -->
     </div>
-
 </div>
 <% include partials/jscripts.ejs %>
+<!-- jquery.inputmask -->
+<script src="/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
 </body>
 </html>

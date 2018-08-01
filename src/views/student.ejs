@@ -48,7 +48,7 @@
                 }
             };
 
-            dynamodb.createTable(params, function (err, data) {
+            dynamodb.createStudentTable(params, function (err, data) {
                 if (err) {
                     document.getElementById('textarea').innerHTML = "Unable to create table: " + "\n" + JSON.stringify(err, undefined, 2);
                 } else {

@@ -30,4 +30,12 @@ Minimum basic requirements for ERP from Client:
 
 
 In add bus route form
+Whenever we add any new bus, following details will be required-
 
+1. Number allotment
+2. Date of reg
+3. Insurance renewal date
+4. Fitness renewal date
+5. registration number
+6. Allotted driver and conductor\
+7. Tentative area that bus is covering
