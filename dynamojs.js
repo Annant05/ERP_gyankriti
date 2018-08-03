@@ -114,6 +114,18 @@ module.exports.getStudents = function (callback) {
     });
 };
 
+module.exports.getBusRoutes = function (callback) {
+    const params = {
+        Limit: 3,
+        TableName: "bus_routes",
+    };
+    dynamodb.scan(params, function (err, data) {
+        if (err) console.log(err, err.stack); // an error occurred
+        else {
+            callback(err, data);
+        }
+    });
+};
 
 module.exports.createBusRouteTable = function () {
     const params = {

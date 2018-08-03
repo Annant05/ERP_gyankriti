@@ -32,28 +32,35 @@
                 <thead>
                 <tr>
                     <th>Route No</th>
-                    <th>No of Seats</th>
+                    <th>Registraion Date</th>
+                    <th>Insurance Date</th>
+                    <th>Fitness Date</th>
+                    <th>Registration no</th>
                     <th>Driver</th>
+                    <th>Conductor</th>
                     <th>Area</th>
-                    <th>Shifts</th>
-                    <th>Bus Registration</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <!-- Dynamically show data start here-->
+
+                <% for (let item of items) { %>
                 <tr role="row">
-                    <td>na1</td>
-                    <td>na2</td>
-                    <td>na3</td>
-                    <td>na4</td>
-                    <td>na5</td>
-                    <td>na6</td>
+                    <td><%= item.route_no.S %></td>
+                    <td><%= item.date_registration.S %></td>
+                    <td><%= item.date_insurance.S %></td>
+                    <td><%= item.date_fitness.S %></td>
+                    <td><%= item.registration_no.S %></td>
+                    <td><%= item.driver.S %></td>
+                    <td class=""><%= item.conductor.S %></td>
+                    <td class=""><%= item.area.S %></td>
                     <td class=" last">
-                        <a onclick="alert('show route details modal somehow');" id="viewbutton" type="button">View
-                            Details</a>
+                        <a onclick="alert('Under Development');" id="viewbutton" type="button">View</a>
                     </td>
                 </tr>
+                <% } %>
+
                 <!-- Dynamically show data end here-->
                 </tbody>
             </table>

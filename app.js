@@ -45,9 +45,6 @@ app.post('/add-student', function (req, res) { // this function can be optimised
 });
 
 
-app.get('/bus-routes', function (req, res) {
-    res.render('bus-routes');
-});
 
 app.get('/base-temp', function (req, res) {
     res.render('base-temp');
@@ -69,6 +66,14 @@ app.get('/show-students', function (req, res) {
     dynamo.getStudents(function (req, data) {
         if (data) console.log(data.Items[0].rollno.S); else data.Items = null;
         res.render('showstudents', {items: data.Items});
+    });
+});
+
+app.get('/bus-routes', function (req, res) {
+
+    dynamo.getBusRoutes(function (req, data) {
+        if (data) console.log(data.Items[0].route_no.S); else data.Items = null;
+        res.render('bus-routes', {items: data.Items});
     });
 });
 
