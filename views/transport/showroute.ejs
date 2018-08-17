@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% include partials/head.ejs %>
+    <% include ../partials/head.ejs %>
 
 </head>
 <body class="nav-md">
 <div class="container body">
-    <% include partials/menuandtopnav.ejs %>
+    <% include ../partials/menuandtopnav.ejs %>
 
     <div class="right_col" role="main">
         <div class="x_panel">
@@ -18,7 +18,7 @@
                     <div class="title_right">
                         <div class="col-md-3 col-sm-3 col-xs-12 form-group pull-right top_search">
                             <button type="button" class="btn btn-round btn-primary"
-                                    onclick="location.href='/add-bus-route'">
+                                    onclick="location.href='/transport/addroute'">
                                 Add Bus-Route
                             </button>
                         </div>
@@ -70,6 +70,6 @@
     </div>
     <!-- /page content -->
 </div>
-<% include partials/jscripts.ejs %>
+<% include ../partials/jscripts.ejs %>
 </body>
 </html>

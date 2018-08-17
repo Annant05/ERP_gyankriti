@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5db06ce-1dcf-4eeb-a58d-66d16d6531fb" name="Default" comment="show routes in table dynamically in bus-routes.ejs">
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/serverfunc.ejs" afterDir="false" />
+    <list default="true" id="e5db06ce-1dcf-4eeb-a58d-66d16d6531fb" name="Default" comment="Revised Directory Structure and using router.">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/student.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/student/viewstud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/student.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/add-bus-route.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/transport/addroute.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/addstudent.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/student/add.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/base-temp.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/base-temp.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/bus-routes.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/transport/showroute.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/jscripts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/jscripts.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/menuandtopnav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/menuandtopnav.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/serverfunc.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/serverfunc.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/showstudents.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/student/show.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Chart.js/.codeclimate.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Chart.js/.codeclimate.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Chart.js/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Chart.js/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/DateJS/GruntFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/DateJS/GruntFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/ajax/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/ajax/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/annotating/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/annotating/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/axes-interacting/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/axes-interacting/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/axes-multiple/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/axes-multiple/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/axes-time-zones/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/axes-time-zones/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/axes-time/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/axes-time/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/basic-options/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/basic-options/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/basic-usage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/basic-usage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/canvas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/canvas/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/categories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/image/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/image/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/interacting/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/interacting/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/navigate/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/navigate/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/percentiles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/percentiles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/realtime/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/realtime/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/resize/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/resize/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/selection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/selection/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/series-errorbars/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/series-errorbars/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/series-pie/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/series-pie/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/series-toggle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/series-toggle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/series-types/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/series-types/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/stacking/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/stacking/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/symbols/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/symbols/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/threshold/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/threshold/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/tracking/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/tracking/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/visitors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/visitors/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/examples/zooming/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/examples/zooming/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/excanvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/excanvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/excanvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/excanvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/Flot/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/Flot/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/autosize/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/autosize/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-daterangepicker/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-daterangepicker/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-daterangepicker/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-daterangepicker/website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/docs/theme/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/docs/theme/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/tasks/bump_version.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-datetimepicker/tasks/bump_version.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-wysiwyg/gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-wysiwyg/gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-wysiwyg/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-wysiwyg/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap-wysiwyg/src/bootstrap-wysiwyg.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap-wysiwyg/src/bootstrap-wysiwyg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/bootstrap/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/bootstrap/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/cropper/dist/cropper.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/cropper/dist/cropper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/cropper/dist/cropper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/cropper/dist/cropper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/cropper/src/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/cropper/src/js/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/cropper/src/js/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/cropper/src/js/methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/cropper/src/js/preview.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/cropper/src/js/preview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/datatables.net-buttons/js/buttons.flash.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/datatables.net-buttons/js/buttons.flash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/datatables.net-buttons/js/buttons.flash.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/datatables.net-buttons/js/buttons.flash.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/datatables.net/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/datatables.net/js/jquery.dataTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/devbridge-autocomplete/gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/devbridge-autocomplete/gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/build/amd2common.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/build/amd2common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/dist/echarts.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/dist/echarts.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/dist/echarts.common.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/dist/echarts.common.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/dist/echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/dist/echarts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/dist/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/dist/echarts.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/dist/echarts.simple.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/dist/echarts.simple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/src/component/toolbox/feature/SaveAsImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/src/component/toolbox/feature/SaveAsImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/test/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/test/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/test/dataZoom-scatter-category.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/test/dataZoom-scatter-category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/test/dataZoom-scatter-toolbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/test/dataZoom-scatter-toolbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/test/ut/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/test/ut/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/test/ut/ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/test/ut/ui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/echarts/test/ut/ut.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/echarts/test/ut/ut.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/font-awesome/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/font-awesome/less/path.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/font-awesome/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/font-awesome/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/gauge.js/assets/excanvas.compiled.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/gauge.js/assets/excanvas.compiled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/gauge.js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/gauge.js/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/google-code-prettify/src/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/google-code-prettify/src/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/google-code-prettify/src/run_prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/google-code-prettify/src/run_prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jquery-knob/excanvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jquery-knob/excanvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jquery-knob/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jquery-knob/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jquery.easy-pie-chart/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jquery.easy-pie-chart/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jquery.easy-pie-chart/karma.conf.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jquery.easy-pie-chart/karma.conf.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jquery.tagsinput/grunt-tasks/options/cssmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jquery.tagsinput/grunt-tasks/options/cssmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jquery.tagsinput/grunt-tasks/options/uglify.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jquery.tagsinput/grunt-tasks/options/uglify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jqvmap/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jqvmap/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jqvmap/grunt/concat.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jqvmap/grunt/concat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jqvmap/grunt/shell.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jqvmap/grunt/shell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/jszip/documentation/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/jszip/documentation/_layouts/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/parsleyjs/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/parsleyjs/gulpfile.babel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/popups/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/popups/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/raphael/dev/raphael.core.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/raphael/dev/raphael.core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/raphael/dev/raphael.svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/raphael/dev/raphael.svg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/raphael/raphael.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/raphael/raphael.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/raphael/raphael.no-deps.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/raphael/raphael.no-deps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/select2/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/select2/Gruntfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/select2/docs/_sass/vendor/font-awesome/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/select2/docs/_sass/vendor/font-awesome/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/select2/docs/vendor/js/anchor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/select2/docs/vendor/js/anchor.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendors/starrr/Gruntfile.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/vendors/starrr/Gruntfile.coffee" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,38 +126,47 @@
     <session id="1192454857">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ejs" value="17" />
-          <entry key="js" value="24" />
+          <entry key="ejs" value="41" />
+          <entry key="gitignore" value="1" />
+          <entry key="js" value="38" />
+          <entry key="json" value="1" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="EJS" value="16" />
-          <entry key="JavaScript" value="23" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="EJS" value="40" />
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="37" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="1" />
           <entry key="UML" value="1" />
         </counts>
@@ -60,9 +175,10 @@
       <usages-collector id="statistics.php.new.class" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="ejs" value="744" />
-          <entry key="js" value="1870" />
-          <entry key="txt" value="67" />
+          <entry key="ejs" value="1061" />
+          <entry key="gitignore" value="1" />
+          <entry key="js" value="2752" />
+          <entry key="txt" value="254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options" />
@@ -74,10 +190,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="EJS" value="744" />
+          <entry key="EJS" value="1061" />
           <entry key="HTML" value="3" />
-          <entry key="JavaScript" value="1867" />
-          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="JavaScript" value="2749" />
+          <entry key="PLAIN_TEXT" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.test" />
@@ -85,29 +201,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="330">
+              <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/bus-routes.ejs">
+        <entry file="file://$PROJECT_DIR$/views/student/show.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+            <state relative-caret-position="130">
+              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/serverfunc.ejs">
+        <entry file="file://$PROJECT_DIR$/views/student/viewstud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/serverfunc.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -124,9 +258,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>father</find>
-      <find>/form</find>
-      <find>functuion</find>
       <find>data</find>
       <find>render</find>
       <find>../vendors</find>
@@ -154,6 +285,9 @@
       <find>`</find>
       <find>req</find>
       <find>index</find>
+      <find>app</find>
+      <find>add</find>
+      <find>ADD</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -171,6 +305,7 @@
       <replace>iCheck-helper-mine /&gt;</replace>
       <replace>&quot;/base-temp&quot;</replace>
       <replace>data</replace>
+      <replace>router</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -188,7 +323,6 @@
         <option value="$PROJECT_DIR$/src/views/form.ejs" />
         <option value="$PROJECT_DIR$/src/views/index.html" />
         <option value="$PROJECT_DIR$/id_form" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/menuitems.txt" />
         <option value="$PROJECT_DIR$/src/views/head.ejs" />
         <option value="$PROJECT_DIR$/src/views/menu.ejs" />
@@ -218,7 +352,23 @@
         <option value="$PROJECT_DIR$/public/js/jquery.js" />
         <option value="$PROJECT_DIR$/src/views/index.ejs" />
         <option value="$PROJECT_DIR$/src/views/serverfunc.ejs" />
+        <option value="$PROJECT_DIR$/views/bus-routes.ejs" />
+        <option value="$PROJECT_DIR$/views/base-temp.ejs" />
+        <option value="$PROJECT_DIR$/views/addstudent.ejs" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/views/showstudents.ejs" />
+        <option value="$PROJECT_DIR$/routes/addstudent.js" />
+        <option value="$PROJECT_DIR$/routes/showstudent.js" />
+        <option value="$PROJECT_DIR$/views/add-bus-route.ejs" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/routes/student.js" />
+        <option value="$PROJECT_DIR$/routes/transport.js" />
+        <option value="$PROJECT_DIR$/views/transport/showroute.ejs" />
+        <option value="$PROJECT_DIR$/views/partials/menuandtopnav.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/student/show.ejs" />
+        <option value="$PROJECT_DIR$/views/student/viewstud.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -290,31 +440,7 @@
             <path>
               <item name="ERP_gyankriti" type="b2602c69:ProjectViewProjectNode" />
               <item name="ERP_gyankriti" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ERP_gyankriti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ERP_gyankriti" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ERP_gyankriti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ERP_gyankriti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ERP_gyankriti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ERP_gyankriti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ERP_gyankriti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ERP_gyankriti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -335,6 +461,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
     <property name="last_opened_file_path" value="/usr/lib/nodejs/npm" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -345,7 +472,13 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/transport" />
+      <recent name="$PROJECT_DIR$/views/student" />
+      <recent name="$PROJECT_DIR$/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/vendors" />
@@ -457,7 +590,13 @@
       <workItem from="1534484569489" duration="1591000" />
       <workItem from="1534491119392" duration="841000" />
       <workItem from="1534494591489" duration="2330000" />
-      <workItem from="1534498363577" duration="1034000" />
+      <workItem from="1534498363577" duration="1151000" />
+      <workItem from="1534502992479" duration="544000" />
+      <workItem from="1534505639119" duration="4099000" />
+      <workItem from="1534510243028" duration="1324000" />
+      <workItem from="1534512541023" duration="1047000" />
+      <workItem from="1534516963539" duration="3121000" />
+      <workItem from="1534523097476" duration="3085000" />
     </task>
     <task id="LOCAL-00001" summary="bug in get data from form">
       <created>1531549814826</created>
@@ -529,11 +668,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533271094960</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="experiments with jquery and ajax success. Way to get data from node js server successfull. work to be done pending.">
+      <created>1534499585535</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1534499585535</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110552000" />
+    <option name="totallyTimeSpent" value="123889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,21 +691,44 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="27" width="960" height="1053" extended-state="4" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.24653149" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.12598841" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50108933" side_tool="true" weight="0.13020559" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32790446" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32681867" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49920928" visible="true" weight="0.32790446" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49920928" weight="0.32681867" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49973643" weight="0.32790446" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5002636" side_tool="true" weight="0.32897604" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.12598841" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" sideWeight="0.50108933" side_tool="true" weight="0.13020559" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32790446" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32681867" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49920928" weight="0.32681867" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49973643" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -569,7 +738,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -614,62 +783,11 @@
     <MESSAGE value="new modules added. Coding is pending." />
     <MESSAGE value="add-bus-route in dynamodb coded. data form now enters data to the table. Show routes pending. need to figure out how to show all the data." />
     <MESSAGE value="show routes in table dynamically in bus-routes.ejs" />
-    <option name="LAST_COMMIT_MESSAGE" value="show routes in table dynamically in bus-routes.ejs" />
+    <MESSAGE value="experiments with jquery and ajax success. Way to get data from node js server successfull. work to be done pending." />
+    <MESSAGE value="Revised Directory Structure and using router." />
+    <option name="LAST_COMMIT_MESSAGE" value="Revised Directory Structure and using router." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/ejs/lib/ejs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="933" selection-start-line="933" selection-end-line="933" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="149" column="34" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/aws-sdk/lib/param_validator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="116" column="13" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/select2/docs/_includes/examples/data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/id_form" />
-    <entry file="file://$PROJECT_DIR$/node_modules/aws-sdk/clients/dynamodb.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="313" column="30" selection-start-line="313" selection-start-column="30" selection-end-line="313" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendors/pnotify/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/head.ejs" />
     <entry file="file://$PROJECT_DIR$/src/views/menu.ejs" />
     <entry file="file://$PROJECT_DIR$/src/views/test.ejs" />
@@ -723,20 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/custom.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -769,31 +873,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/partials/jscripts.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/add-bus-route.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/showstudents.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="61" column="44" lean-forward="true" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -848,59 +931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/base-temp.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/addstudent.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-36108">
           <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="93" column="3" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/partials/menuandtopnav.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamojs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="186" column="2" lean-forward="true" selection-start-line="186" selection-start-column="2" selection-end-line="186" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/partials/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -925,24 +959,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/bus-routes.ejs">
+    <entry file="file://$PROJECT_DIR$/ses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        <state relative-caret-position="776">
+          <caret line="93" column="3" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/serverfunc.ejs">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/jscripts.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/base-temp.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/showstudent.js" />
+    <entry file="file://$PROJECT_DIR$/routes/addstudent.js" />
+    <entry file="file://$PROJECT_DIR$/dynamojs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/add-bus-route.js" />
+    <entry file="file://$PROJECT_DIR$/routes/bus-routes.js" />
+    <entry file="file://$PROJECT_DIR$/views/partials/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/student.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/menuandtopnav.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/transport/showroute.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/transport/addroute.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/student/add.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/transport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="330">
+          <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/student/show.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/student/viewstud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/serverfunc.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
