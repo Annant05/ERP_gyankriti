@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function clickkk() {
+            alert('click');
+        }
+
+        $(function () {
+            // $("#target").click(function () {
+            //     clickkk();
+            // });
+
+
+            // CREATE/POST
+            $('#target').click(function (event) {
+                // event.preventDefault();
+                // alert('inside the js func');
+                $.ajax({
+                    url: '/serverfunc',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({name: "Annant"}),
+                    success: function (response) {
+                        console.log(response);
+                        alert('success' + response.items[0].area.S);
+                    }
+                })
+                ;
+            });
+
+        });
+    </script>
+</head>
+
+<body class="nav-md">
+<div class="container body">
+
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div id="target">
+            Click here
+        </div>
+        <div id="other">
+            Trigger the handler
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
