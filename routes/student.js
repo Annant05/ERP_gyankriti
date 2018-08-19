@@ -3,7 +3,7 @@
 const config = require('../config/config.js');
 const express = require('express');
 const router = express.Router();
-const bodyParser = require("body-parser");  // used bodyparser to get data from all the field in form
+const bodyParser = require("body-parser");  // used body-parser to get data from all the field in form
 
 /* END: Declaration node.js */
 /* Declaration of AWS classes start */
@@ -33,7 +33,6 @@ const listTables = function () {
         else console.log(data);           // successful response
     });
 };
-
 
 const createStudentTable = function () {
     const params = {
@@ -67,7 +66,6 @@ const createStudentTable = function () {
     listTables();
 };
 
-
 const getDataFromRollNo = function (rollno, callback) {
     const params = {
         TableName: TableName,
@@ -89,14 +87,13 @@ const getDataFromRollNo = function (rollno, callback) {
     }
 };
 
-
 const getStudents = function (callback) {
     const params = {
-        Limit: 3,
+        Limit: 10,
         TableName: TableName,
     };
     try {
-        dynamodb.scan(params, function (err, data) {
+        docClientDynamo.scan(params, function (err, data) {
             if (err) console.log(err, err.stack); // an error occurred
             else {
                 callback(err, data);
@@ -158,19 +155,20 @@ router.get('/add', function (req, res) {
 });
 
 router.post('/add', function (req, res) { // this function can be optimised
-
+//TODO: Implement this using AJAX and return response for better user experience.
     try {
         addNewStudent(req);
         res.end("Data enter, Student added");
     } catch (err) {
         console.log(err);
     }
+
 });
 
 router.get('/show', function (req, res) {
 
     getStudents(function (req, data) {
-        if (data) console.log(data.Items[0].rollno.S); else data.Items = null;
+        if (data) console.log(data.Items[0].rollno); else data.Items = null;
         res.render('student/show', {items: data.Items});
     });
 
@@ -184,7 +182,6 @@ router.post('/show', function (req, res) {
     });
 
 });
-
 
 /*  END: get and post method block */
 /*  module export block start  */

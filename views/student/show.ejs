@@ -56,13 +56,13 @@
 
                 <% for (let item of items) { %>
                 <tr role="row">
-                    <td class="rolln"><%= item.rollno.S %></td>
-                    <td><%= item.name.S + " " + item.stud_last_name.S %></td>
-                    <td><%= item.s_gender.S %></td>
-                    <td><%= item.s_dob.S %></td>
-                    <td><%= item.father_name.S %></td>
-                    <td><%= item.mother_name.S %></td>
-                    <td class=""><%= item.mother_name.S %></td>
+                    <td class="rolln"><%= item.rollno %></td>
+                    <td><%= item.name + " " + item.stud_last_name %></td>
+                    <td><%= item.s_gender %></td>
+                    <td><%= item.s_dob %></td>
+                    <td><%= item.father_name %></td>
+                    <td><%= item.mother_name %></td>
+                    <td class=""><%= item.mother_name %></td>
                     <td class=" last">
                         <a class='view-button' type="button" style="color: blue;">View</a>
                     </td>
