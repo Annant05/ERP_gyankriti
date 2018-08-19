@@ -3,6 +3,7 @@
 const config = require('../config/config.js');
 const express = require('express');
 const router = express.Router();
+const bodyParser = require("body-parser");  // used bodyparser to get data from all the field in form
 
 /* END: Declaration node.js */
 /* Declaration of AWS classes start */
@@ -107,6 +108,44 @@ const getStudents = function (callback) {
 
 };
 
+const addNewStudent = function (data) {//try to implement all the data parsing using ajax as it will be optimized. and we can provide a feedback as well to the user.
+
+    const time = (Math.round((new Date()).getTime() / 1000)).toString();
+
+    const params = {
+        TableName: TableName,
+        Item: {
+
+            "rollno": "GK01" + time,
+            "time_of_insertion": time,
+            //Student data
+            "name": data.body.student.firstname,
+            "stud_last_name": data.body.student.lastname,
+            "s_gender": data.body.student.gender,
+            "s_dob": data.body.student.dob,
+            //Father Data
+            "father_name": data.body.father.name,
+            "father_email": data.body.father.email,
+            "father_mobile": data.body.father.mobile,
+            //Mother Data
+            "mother_name": data.body.mother.name,
+            "mother_email": data.body.mother.email,
+            "mother_mobile": data.body.mother.mobile
+
+        }
+    };
+
+    console.log(params);
+    try {
+        docClientDynamo.put(params, function (err, data) {
+            if (err) console.log(err, err.stack); // an error occurred
+            else console.log(data);
+        });
+    } catch (err) {
+        console.log(err);
+
+    }
+};
 
 
 /* END: Declaration of database functions */
@@ -121,7 +160,7 @@ router.get('/add', function (req, res) {
 router.post('/add', function (req, res) { // this function can be optimised
 
     try {
-        dynamodb.addNewStudent(req);
+        addNewStudent(req);
         res.end("Data enter, Student added");
     } catch (err) {
         console.log(err);
