@@ -34,8 +34,7 @@ $(function () {
             contentType: 'application/json',
             data: JSON.stringify({rolln: $rolln}),
             success: function (response) {
-                console.log(response);
-                $("#debug").text(response.items[0].name.S);
+                console.log(response.items[0]);
             }
         });
 
