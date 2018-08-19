@@ -17,27 +17,28 @@ $(function () {
         ;
     });
 
-    // $("#mytable tr").click(function () {
-    //     var a = $('td:first', $(this).parents('tr')).text();
-    //
-    //     $("#debug").text(a);
-    //     alert(this.text);
-    // });
+    $(".view-button").click(function () {
+        var $item = $(this).closest("tr")   // Finds the closest row <tr>
+            .find(".nr")     // Gets a descendent with class="nr"
+            .text();         // Retrieves the text within <td>
 
-    // $('table').on('click', '#view-button', function () {
-    //     // var rowEl = $(this).closest('tr');
-    //     // var id = rowEl.find('.id').text();
-    //
-    //     alert(rowEl + " " + id);
-    //     //
-    //     // $.ajax({
-    //     //     url: '/products/' + id,
-    //     //     method: 'DELETE',
-    //     //     contentType: 'application/json',
-    //     //     success: function (response) {
-    //     //         console.log(response);
-    //     //         $('#get-button').click();
-    //     //     }
-    //     // });
-    // });
+        var $row = $(this).closest("tr");    // Find the row
+        var $rolln = $row.find(".rolln").text(); // Find the text
+
+        // Let's test it out
+        // alert($rolln);
+
+        $.ajax({
+            url: '/student/show',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({rolln: $rolln}),
+            success: function (response) {
+                console.log(response);
+                $("#debug").text(response.items[0].name.S);
+            }
+        });
+
+    });
+
 });

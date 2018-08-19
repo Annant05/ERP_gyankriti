@@ -3,16 +3,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        function clickkk() {
-            alert('click');
-        }
-
         $(function () {
-            // $("#target").click(function () {
-            //     clickkk();
-            // });
-
-
             // CREATE/POST
             $('#target').click(function (event) {
                 // event.preventDefault();
@@ -26,10 +17,8 @@
                         console.log(response);
                         alert('success' + response.items[0].area.S);
                     }
-                })
-                ;
+                });
             });
-
         });
     </script>
 </head>

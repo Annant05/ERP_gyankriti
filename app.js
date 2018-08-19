@@ -19,24 +19,21 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'vendors')));
 app.use(express.static(path.join(__dirname, 'views')));
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-
 app.use('/', require('./routes/index'));
 app.use('/student', require('./routes/student'));
 app.use('/transport', require('./routes/transport'));
 
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 app.get('/base-temp', function (req, res) {
     res.render('base-temp');
 });
 
-
 app.put('/serverfunc', function (req, res) {
     console.log("Succesfully called a custom function : newmethod from our client side code");
 });
-
 
 var nos = 0;
 app.post('/serverfunc', function (req, res) {
@@ -44,12 +41,13 @@ app.post('/serverfunc', function (req, res) {
     nos = nos + 1;
     console.log('this is a post request no ' + nos);
     // console.log((res));
-    console.log((req.body));
+    console.log((req.body.name));
 
-    dynamo.getBusRoutes(function (req, data) {
-        if (data) console.log(data.Items[0].area.S); else data.Items = null;
-        res.send({items: data.Items});
-    });
+    //
+    // dynamo.getBusRoutes(function (req, data) {
+    //     if (data) console.log(data.Items[0].area.S); else data.Items = null;
+    //     res.send({items: data.Items});
+    // });
 
 });
 
@@ -70,4 +68,4 @@ app.listen(PORT, function (err) {
     else console.log('server started on port : ' + 8080);
 });
 
-console.log('Client-side code running');
+console.log('Server-side code running');

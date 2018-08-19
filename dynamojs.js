@@ -12,7 +12,7 @@ AWS.config.update({
     // secretAccessKey: "fake"
 });
 
-const dynamodb = new AWS.DynamoDB();
+const dynamodb = new AWS.DynamoDB.DocumentClient();
 const TableName = "students";
 
 function listtables() {
@@ -52,7 +52,7 @@ module.exports.createStudentTable = function () {
     });
 
     console.log("The table are listed \n");
-    listtables();
+    listTables();
 };
 
 
@@ -114,6 +114,7 @@ module.exports.getStudents = function (callback) {
     });
 };
 
+
 module.exports.getBusRoutes = function (callback) {
     const params = {
         Limit: 3,
@@ -156,7 +157,7 @@ module.exports.createBusRouteTable = function () {
     });
 
     console.log("The table are listed \n");
-    listtables();
+    listTables();
 };
 
 
@@ -187,4 +188,19 @@ module.exports.addBusRoute = function (data) {
 };
 
 
+module.exports.getStudentsfromRollNo = function (rollno, callback) {
 
+    var params = {
+        Key: {
+            "rollno": {S: rollno}
+        },
+        TableName: TableName
+    };
+
+    dynamodb.scan(params, function (err, data) {
+        if (err) console.log(err, err.stack); // an error occurred
+        else {
+            callback(err, data);
+        }
+    });
+};
