@@ -26,7 +26,6 @@ const TableName = "students";
 
 
 // all dynamodb operations functions code here. Such as ADD,UPDATE,DELETE, SCAN ,etc
-// TODO: Create all the database functions
 
 const listTables = function () {
     const params = {};
@@ -76,6 +75,7 @@ const getDataUsingRollNo = function (rollno, callback) {
             ':rn': rollno
         }
     };
+    console.log(params);
     try {
         docClientDynamo.query(params, function (err, data) {
             if (err) console.log(err);
@@ -178,7 +178,7 @@ router.get('/show', function (req, res) {
 router.post('/show', function (req, res) {
 
     getDataUsingRollNo(req.body.rolln, function (req, data) {
-        if (data) console.log("router.post:   " + JSON.stringify(data.Items[0].name)); else data.Items = null;// TODO: here is a bug
+        if (data) console.log("router.post:   " + JSON.stringify(data.Items[0].name)); else data.Items = null;
         res.send({items: data.Items});
     });
 

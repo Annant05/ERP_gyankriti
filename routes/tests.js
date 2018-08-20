@@ -26,7 +26,6 @@ const TableName = "students";
 
 
 // all dynamodb operations functions code here. Such as ADD,UPDATE,DELETE, SCAN ,etc
-// TODO: Create all the database functions
 
 const listTables = function () {
     const params = {};
@@ -151,7 +150,7 @@ const addNewStudent = function (data) {//try to implement all the data parsing u
 
 
 router.get('/add', function (req, res) {
-    res.render('student/add');
+    res.render('tests/add');
     console.log("get tests/add render web page wizard");
 });
 
@@ -169,17 +168,26 @@ router.post('/add', function (req, res) { // this function can be optimised
 router.get('/show', function (req, res) {
 
     getStudents(function (req, data) {
-        if (data) console.log(data.Items[0].rollno); else data.Items = null;
-        res.render('student/show', {items: data.Items});
+        if (data) console.log(data.Items[0].name); else data.Items = null;
+        res.render('tests/show', {items: data.Items});
     });
 
 });
 
 router.post('/show', function (req, res) {
 
-    getDataUsingRollNo(req.body.rolln, function (req, data) {
-        if (data) console.log("router.post:   " + JSON.stringify(data.Items[0].name)); else data.Items = null;// TODO: here is a bug
-        res.send({items: data.Items});
+    console.log("get roll no from body server side : " + JSON.stringify(req.body));
+
+    getDataUsingRollNo(req.body.rolln, function (reqt, data) {
+        if (data) {
+            console.log("router.post:   " + JSON.stringify(data.Items[0].name));
+            res.send({items: data.Items});
+        } else {
+            console.log("errorin fetching data : " + data);
+            data.Items = null;
+            res.send({items: data.Items});
+        }
+
     });
 
 });

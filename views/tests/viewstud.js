@@ -25,14 +25,15 @@ $(function () {
         var $row = $(this).closest("tr");    // Find the row
         var $rolln = $row.find(".rolln").text(); // Find the text
 
+        console.log("Roll no sent to server using post : " + $rolln);
         // Let's test it out
         // alert($rolln);
-
+        // setInterval(300);
         $.ajax({
-            url: '/student/show',
+            url: '/tests/show',
             method: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify({rolln: $rolln}),
+            data: JSON.stringify({rolln: "GK011534776084"}),
             success: function (response) {
                 console.log(response.items[0]);
             }

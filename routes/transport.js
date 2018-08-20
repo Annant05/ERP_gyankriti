@@ -1,5 +1,7 @@
 /* declaration of the required base classes of node.js start */
 
+//TODO: proper console logging
+
 const config = require('../config/config.js');
 const express = require('express');
 const router = express.Router();
@@ -24,7 +26,6 @@ const TableName = "bus_routes";
 
 
 // all dynamodb operations functions code here. Such as ADD,UPDATE,DELETE, SCAN ,etc
-// TODO: Create all the database functions
 
 const listTables = function () {
     const params = {};
