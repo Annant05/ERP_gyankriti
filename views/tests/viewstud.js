@@ -11,7 +11,7 @@ $(function () {
             data: JSON.stringify({name: "Annant"}),
             success: function (response) {
                 console.log(response);
-                alert('success' + response.items[0].area);
+                alert('success' + response.items[0].area.S);
             }
         })
         ;
@@ -24,7 +24,7 @@ $(function () {
 
         var $row = $(this).closest("tr");    // Find the row
         var $rolln = $row.find(".rolln").text(); // Find the text
-        console.log($rolln);
+
         // Let's test it out
         // alert($rolln);
 

@@ -152,7 +152,7 @@ const addNewStudent = function (data) {//try to implement all the data parsing u
 
 router.get('/add', function (req, res) {
     res.render('student/add');
-    console.log("get student/add render web page wizard");
+    console.log("get tests/add render web page wizard");
 });
 
 router.post('/add', function (req, res) { // this function can be optimised

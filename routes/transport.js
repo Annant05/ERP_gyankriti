@@ -67,7 +67,7 @@ const createBusRouteTable = function () {
     }
 
     console.log("The table are listed \n");
-    listtables();
+    listTables();
 };
 
 const getBusRoutes = function (callback) {
@@ -138,7 +138,6 @@ router.post('/addroute', function (req, res) {
 //TODO: Implement this using AJAX and return response for better user experience.
     addBusRoute(req);
     res.end("Data entered, bus route added");
-
 });
 
 
