@@ -8,9 +8,11 @@ const bodyParser = require("body-parser");  // used bodyparser to get data from 
 const PORT = process.env.PORT || 8080;
 
 //Main body of the js file
-app.use(bodyParser.urlencoded({
+app.use(bodyParser.urlencoded({  // this is important
     extended: true
 }));
+
+app.use(bodyParser.json());  // this is important caused a lot of time waste.
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'vendors')));

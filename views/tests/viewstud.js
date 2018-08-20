@@ -33,7 +33,7 @@ $(function () {
             url: '/tests/show',
             method: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify({rolln: "GK011534776084"}),
+            data: JSON.stringify({rolln: $rolln}),
             success: function (response) {
                 console.log(response.items[0]);
             }
