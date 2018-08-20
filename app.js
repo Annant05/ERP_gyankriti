@@ -2,7 +2,6 @@
 const express = require("express"), app = express(); // creating express server
 const path = require('path');
 const request = require("request");
-const bodyParser = require("body-parser");  // used bodyparser to get data from all the field in form
 
 // Declaration related to servers
 const PORT = process.env.PORT || 8080;
