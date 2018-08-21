@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5db06ce-1dcf-4eeb-a58d-66d16d6531fb" name="Default" comment="bug fixed.">
+    <list default="true" id="e5db06ce-1dcf-4eeb-a58d-66d16d6531fb" name="Default" comment="bug fixed. MODAL implementation pending.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/tests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/tests/show.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/tests/show.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/tests/viewstud.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/tests/viewstud.js" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +21,14 @@
     <session id="1192454857">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="36" />
+          <entry key="project.closed" value="37" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -49,17 +52,17 @@
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.opened" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JavaScript-modules-diagram//home/annant/PhpstormProjects/ERP_gyankriti" value="1" />
           <entry key="PHP//home/annant/PhpstormProjects/ERP_gyankriti/vendors" value="1" />
-          <entry key="ejs" value="66" />
+          <entry key="ejs" value="69" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="101" />
+          <entry key="js" value="107" />
           <entry key="json" value="2" />
           <entry key="ts" value="1" />
           <entry key="txt" value="1" />
@@ -67,10 +70,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="EJS" value="65" />
+          <entry key="EJS" value="68" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="100" />
+          <entry key="JavaScript" value="106" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="TypeScript" value="1" />
           <entry key="UML" value="3" />
@@ -84,7 +87,7 @@
           <entry key="ejs" value="1404" />
           <entry key="gitignore" value="1" />
           <entry key="js" value="8624" />
-          <entry key="txt" value="1017" />
+          <entry key="txt" value="1072" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options" />
@@ -99,10 +102,17 @@
           <entry key="EJS" value="1404" />
           <entry key="HTML" value="3" />
           <entry key="JavaScript" value="8621" />
-          <entry key="PLAIN_TEXT" value="1019" />
+          <entry key="PLAIN_TEXT" value="1074" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.test" />
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.delete.local" value="2" />
+          <entry key="git.branch.delete.remote" value="2" />
+          <entry key="git.branch.merge" value="3" />
+        </counts>
+      </usages-collector>
     </session>
     <session id="-1247379924">
       <usages-collector id="statistics.lifecycle.project">
@@ -140,6 +150,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/tests/show.ejs">
@@ -181,6 +192,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf />
+>>>>>>> Stashed changes
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -247,9 +261,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ba1bc1bbe079a749a58bdb8ab9fe197686873da2" />
+        <entry key="$PROJECT_DIR$" value="c0eedc5439f96c71d2e3ee20c25e1d94fde7aa70" />
       </map>
     </option>
+    <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -490,8 +506,8 @@
         <item itemvalue="Node.js.transport.js" />
         <item itemvalue="Node.js.student.js" />
         <item itemvalue="JavaScript Debug.index.ejs" />
-        <item itemvalue="Node.js.ses.js" />
         <item itemvalue="Node.js.testsample.js" />
+        <item itemvalue="Node.js.ses.js" />
       </list>
     </recent_temporary>
   </component>
@@ -575,9 +591,14 @@
       <workItem from="1534782882819" duration="882000" />
       <workItem from="1534785526847" duration="75000" />
       <workItem from="1534785629465" duration="3930000" />
+<<<<<<< Updated upstream
       <workItem from="1534790065264" duration="172000" />
       <workItem from="1534826914917" duration="335000" />
       <workItem from="1534827272962" duration="3436000" />
+=======
+      <workItem from="1534790065264" duration="988000" />
+      <workItem from="1534846486043" duration="228000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="bug in get data from form">
       <created>1531549814826</created>
@@ -712,11 +733,22 @@
       <option name="project" value="LOCAL" />
       <updated>1534783149837</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="bug fixed. MODAL implementation pending.">
+      <created>1534790289414</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1534790289414</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="175549000" />
+=======
+    <option name="totallyTimeSpent" value="172594000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -728,10 +760,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="66" y="-11" width="1301" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" visible="true" weight="0.13088587" />
+=======
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" visible="true" weight="0.11702689" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.12598841" />
       <window_info id="npm" order="2" sideWeight="0.5016129" side_tool="true" weight="0.12598841" />
       <window_info id="Favorites" order="3" sideWeight="0.50162864" side_tool="true" weight="0.12598841" />
@@ -741,13 +779,20 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32763976" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49920928" weight="0.26242235" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49973643" weight="0.32763976" />
+=======
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32790446" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49920928" weight="0.2616721" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49920928" weight="0.36590663" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007907" side_tool="true" weight="0.32681867" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007907" side_tool="true" weight="0.5830619" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -839,7 +884,8 @@
     <MESSAGE value="added test file to complete &quot;MODAL&quot; implementation." />
     <MESSAGE value="some cleanup" />
     <MESSAGE value="project is ready for MODAL Implementation." />
-    <option name="LAST_COMMIT_MESSAGE" value="project is ready for MODAL Implementation." />
+    <MESSAGE value="bug fixed. MODAL implementation pending." />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed. MODAL implementation pending." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -1618,6 +1664,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/routes/tests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1629,11 +1676,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tests/viewstud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/tests/show.ejs">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="149">
           <caret line="94" column="47" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="47" />
           <folding>
@@ -1646,6 +1707,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+=======
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="190" column="7" selection-start-line="190" selection-start-column="7" selection-end-line="190" selection-end-column="7" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

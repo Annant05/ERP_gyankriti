@@ -167,10 +167,10 @@ router.post('/add', function (req, res) { // this function can be optimised
 
 router.get('/show', function (req, res) {
 
-    // getStudents(function (req, data) {
-    //     if (data) console.log(data.Items[0].name); else data.Items = null;
-        res.render('tests/show');//, {items: data.Items});
-    // });
+    getStudents(function (req, data) {
+        if (data) console.log(data.Items[0].name); else data.Items = null;
+        res.render('tests/show', {items: data.Items});
+    });
 
 });
 

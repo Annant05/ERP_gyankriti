@@ -54,19 +54,22 @@
                 </thead>
                 <tbody>
 
-
+                <% for (let item of items) { %>
                 <tr role="row">
-                    <td>Sample_Row</td>
-                    <td class="rolln">GK0101012</td>
-                    <td>Sample_Row</td>
-                    <td>Sample_Row</td>
-                    <td>Sample_Row</td>
-                    <td>Sample_Row</td>
-                    <td class="">Sample_Row</td>
+                    <td><%= item.name + " " + item.stud_last_name %></td>
+                    <td class="rolln"><%= item.rollno %></td>
+                    <td><%= item.s_gender %></td>
+                    <td><%= item.s_dob %></td>
+                    <td><%= item.father_name %></td>
+                    <td><%= item.mother_name %></td>
+                    <td class=""><%= item.mother_name %></td>
                     <td class=" last">
-                        <button class='view-button' type="button" data-toggle="modal" data-target=".bs-example-modal-lg" style="color: blue;">View</button>
+                        <button class='view-button' type="button" data-toggle="modal"
+                                data-target=".student_information_modal" style="color: blue;">View
+                        </button>
                     </td>
                 </tr>
+                <% } %>
                 <!-- Dynamically show data end here-->
                 </tbody>
             </table>
@@ -79,27 +82,24 @@
 
 
         <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large-->
-            <!--modal-->
+        <!--modal-->
         <!--</button>-->
 
-        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade student_information_modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                         </button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        <h4>Student Information</h4>
                     </div>
                     <div class="modal-body">
-                        <h4 class="modal_rollno" >Roll no</h4>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
-                            vel augue laoreet rutrum faucibus dolor auctor.</p>
-                        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque
-                            nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor
-                            fringilla.</p>
+                        <h4 class="name_modal">Name</h4>
+                        <!-- TODO: Implement html to show student data in columns -->
                     </div>
                     <div class="modal-footer">
+                        <!--TODO: Create two function and callbacks in AJAX to Update and print student info. More thought to be given. -->
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
