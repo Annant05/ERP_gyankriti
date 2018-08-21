@@ -26,18 +26,21 @@ $(function () {
         var $rolln = $row.find(".rolln").text(); // Find the text
 
         console.log("Roll no sent to server using post : " + $rolln);
+
+        $(".modal_rollno").text($rolln);
+
         // Let's test it out
         // alert($rolln);
         // setInterval(300);
-        $.ajax({
-            url: '/tests/show',
-            method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({rolln: $rolln}),
-            success: function (response) {
-                console.log(response.items[0]);
-            }
-        });
+        // $.ajax({
+        //     url: '/tests/show',
+        //     method: 'POST',
+        //     contentType: 'application/json',
+        //     data: JSON.stringify({rolln: $rolln}),
+        //     success: function (response) {
+        //         console.log(response.items[0]);
+        //     }
+        // });
 
     });
 
