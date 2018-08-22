@@ -107,7 +107,10 @@ const getStudents = function (callback) {
 
 };
 
-const addNewStudent = function (data) {//try to implement all the data parsing using ajax as it will be optimized. and we can provide a feedback as well to the user.
+const addNewStudent = function (data) {
+
+    //TODO: try to implement all the data parsing using ajax as it will be optimized. and we can provide a feedback as well to the user.
+    //TODO : generate and check for username in real time using AJAX queries on the database.
 
     const time = (Math.round((new Date()).getTime() / 1000)).toString();
 

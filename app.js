@@ -21,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'views')));
 app.use('/', require('./routes/index'));
 app.use('/student', require('./routes/student'));
 app.use('/transport', require('./routes/transport'));
-app.use('/tests', require('./routes/tests'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
