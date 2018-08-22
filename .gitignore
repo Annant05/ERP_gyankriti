@@ -2,3 +2,5 @@
 node_modules/
 /code_ref/*
 code_ref/
+/.idea/
+.idea/
