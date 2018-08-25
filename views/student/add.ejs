@@ -57,55 +57,26 @@
 
                 <div class="x_content">
 
-                    <!--TODO: Create a new dynamic form UI that displays generated roll no in real time using name and last name, with that checks for username availability -->
+                    <!--TODO: Create a new dynamic form UI that displays generated roll no in real time using name and last name, with that checks for username availability
+                    -->
 
                     <form id="stud_details" data-parsley-validate="" method="post"
-                          class="form-horizontal form-label-left" novalidate="">
+                          class="form-horizontal form-label-left"
+                          novalidate="">
+
+                        <!-- Student details form start -->
+
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2><b>Student</b></h2>
+                                <div class="clearfix"></div>
+                            </div>
 
 
-                        <!-- Smart Wizard -->
-                        <div id="wizard" class="form_wizard wizard_horizontal">
-                            <ul class="wizard_steps">
-                                <li>
-                                    <a href="#step-1">
-                                        <span class="step_no">1</span>
-                                        <span class="step_descr">
-                                              Step 1<br/>
-                                              <small>Student Details</small>
-                                          </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#step-2">
-                                        <span class="step_no">2</span>
-                                        <span class="step_descr">
-                                              Step 2<br/>
-                                              <small>Father's Detail</small>
-                                          </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#step-3">
-                                        <span class="step_no">3</span>
-                                        <span class="step_descr">
-                                              Step 3<br/>
-                                              <small>Father's Detail</small>
-                                          </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#step-4">
-                                        <span class="step_no">4</span>
-                                        <span class="step_descr">
-                                              Step 4<br/>
-                                              <small>Admission Details</small>
-                                          </span>
-                                    </a>
-                                </li>
-                            </ul>
+                            <!-- Internal Form   -->
+                            <div class="x_content">
+                                <br>
 
-
-                            <div id="step-1">
                                 <!-- Student details form end -->
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First
@@ -123,7 +94,7 @@
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last
                                         Name <span class="required">*</span>
                                     </label>
-                                    <div class="col-md-4ERP_gyankriti col-sm-4 col-xs-12">
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
                                         <input type="text" id="student-last-name"
                                                class="form-control col-md-7 col-xs-12"
                                                name="student[lastname]" required>
@@ -135,8 +106,7 @@
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender * </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                         <p>
-                                            Male : <input type="radio" class="flat" name="student[gender]"
-                                                          id="genderM"
+                                            Male : <input type="radio" class="flat" name="student[gender]" id="genderM"
                                                           value="male"
                                                           title="male"/>
                                             Female : <input type="radio" class="flat" name="student[gender]"
@@ -148,24 +118,44 @@
 
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">DOB *</label>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="date" class="col-md-7  col-sm-7 col-xs-12 no-spinner"
-                                               name="student[dob]" required>
+                                    <div class="control-group col-md-4 col-sm-4 col-xs-12">
+                                        <fieldset>
+                                            <div class="controls">
+                                                <input type="text" class="form-control col-md-7  col-sm-7 col-xs-12"
+                                                       id="single_cal1" placeholder="" name="student[dob]"
+                                                       aria-describedby="inputSuccess2Status">
+                                            </div>
+                                        </fieldset>
                                     </div>
                                 </div>
+
+                                <div class="ln_solid"></div>
+
+
                                 <!-- Student details form end -->
                             </div>
+                            <!--End internal form-->
+                        </div>
 
-                            <div id="step-2">
-                                <!-- Father's Detail -->
+
+                        <!-- Father's Detail -->
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2><b>Father</b></h2>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                            <!-- Internal Form   -->
+                            <div class="x_content">
+                                <br>
+
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                           for="full-name">Name<span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="full-name">Name<span
                                                 class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="text" id="father-name"
-                                               class="form-control col-md-7 col-xs-12"
+                                        <input type="text" id="father-name" class="form-control col-md-7 col-xs-12"
                                                name="father[name]" required>
                                     </div>
                                 </div>
@@ -176,88 +166,94 @@
                                         address <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="email" id="father-email"
-                                               class="form-control col-md-7 col-xs-12"
+                                        <input type="email" id="father-email" class="form-control col-md-7 col-xs-12"
                                                name="father[email]" required>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                           for="mobile-no">Mobile
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mobile-no">Mobile
                                         No <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="text" maxlength="10" minlength="10"
-                                               id="father-mobile"
-                                               class="form-control col-md-7 col-xs-12" name="father[mobile]"
-                                               required>
+                                        <input type="number" maxlength="10" minlength="10" id="father-mobile"
+                                               class="form-control col-md-7 col-xs-12" name="father[mobile]" required>
                                     </div>
-
                                 </div>
-                                <!-- end Father Detail -->
+
+
+                                <div class="ln_solid"></div>
+                            </div>
+                        </div>
+                        <!-- end Father Detail -->
+
+
+                        <!-- Mother's Detail -->
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2><b>Mother</b></h2>
+                                <div class="clearfix"></div>
                             </div>
 
-                            <div id="step-3">
-                                <!-- Mother's Detail -->
+
+                            <!-- Internal Form   -->
+                            <div class="x_content">
+                                <br>
+
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                           for="mother-name">Name <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mother-name">Name
+                                        <span
                                                 class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="text" id="mother-name"
-                                               class="form-control col-md-7 col-xs-12"
+                                        <input type="text" id="mother-name" class="form-control col-md-7 col-xs-12"
                                                name="mother[name]" required>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                           for="last-name">Email
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Email
                                         address <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="email" id="mother-email"
-                                               class="form-control col-md-7 col-xs-12"
+                                        <input type="email" id="mother-email" class="form-control col-md-7 col-xs-12"
                                                name="mother[email]" required>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                           for="mobile-no">Mobile
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Mobile
                                         No <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="text" maxlength="10" minlength="10"
-                                               id="mother-mobile"
-                                               class="form-control col-md-7 col-xs-12" name="mother[mobile]"
-                                               required>
+                                        <input type="number" maxlength="10" minlength="10" id="mother-mobile"
+                                               class="form-control col-md-7 col-xs-12" name="mother[mobile]" required>
                                     </div>
                                 </div>
-                                <!-- end Mother Detail -->
-                            </div>
 
-                            <div id="step-4">
-                                <h2 class="StepTitle">Step 4 Content</h2>
-                                <p>
-                                    show all the data along with autogenerated data.
-                                </p>
+
+                                <div class="ln_solid"></div>
+                            </div>
+                        </div>
+                        <!-- end Mother Detail -->
+
+
+                        <div class="form-group">
+                            <div class="alignright col-lg-3">
+                                <button type="submit" class="btn btn-success" value="submit">Submit</button>
                             </div>
                         </div>
                     </form>
+                    <!-- Form End -->
+                    <!-- End SmartWizard Content -->
                 </div>
-                <!-- Form End -->
-                <!-- End SmartWizard Content -->
             </div>
         </div>
     </div>
 </div>
-
 <% include ../partials/jscripts.ejs %>
 <!-- jQuery Smart Wizard -->
 <script src="/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
