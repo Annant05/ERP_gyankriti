@@ -20,7 +20,7 @@ $(function () {
             success: function (response) {
                 console.log(response.items[0]);
                 var $item = response.items[0];
-                $(".name_modal").text($item.name + " " + $item.stud_last_name);
+                $(".m_stud_fullname").text($item.name + " " + $item.stud_last_name);
             }
         });
     });

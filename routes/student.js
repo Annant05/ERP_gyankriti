@@ -66,7 +66,6 @@ const createStudentTable = function () {
     console.log("The table are listed \n");
     listTables();
 };
-
 const getDataUsingRollNo = function (rollno, callback) {
     const params = {
         TableName: TableName,
@@ -149,6 +148,10 @@ const addNewStudent = function (data) {
     }
 };
 
+const getLastRollNo= function(callback){
+
+  callback();
+};
 /* END: Declaration of database functions */
 /*  all get and post methods start */
 
@@ -185,6 +188,11 @@ router.post('/show', function (req, res) {
         res.send({items: data.Items});
     });
 
+});
+
+router.get('/modal', function (req, res) {
+    res.render('student/modal');
+    console.log("get student/modal render web page wizard");
 });
 
 /*  END: get and post method block */
