@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 8080;
 //Main body of the js file
 app.use(bodyParser.urlencoded({  // this is important
     extended: true
+
 }));
 
 app.use(bodyParser.json());  // this is important caused a lot of time waste.
@@ -30,13 +31,13 @@ app.get('/base-temp', function (req, res) {
 });
 
 request('http://169.254.169.254/latest/meta-data/public-ipv4', function (error, response, body) {
-    if (body !== undefined) console.log('server started on ip:port : ' + body + ":" + PORT);
+    if (body !== undefined) console.log('server started on ip:port : http://' + body + ":" + PORT);
     else console.log('server started on ip:port : ' + 'http://localhost' + ":" + PORT);
 });
 
 app.listen(PORT, function (err) {
     if (err) console.log("There was some problem in starting the server  : " + JSON.stringify(err, undefined, 2));
-    else console.log('server started on port : ' + 8080);
+    else console.log('server started on port : ' + PORT);
 });
 
 console.log('Server-side code running');

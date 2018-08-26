@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ERP_gyankriti.iml" filepath="$PROJECT_DIR$/.idea/ERP_gyankriti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/erp_gyankriti.iml" filepath="$PROJECT_DIR$/.idea/erp_gyankriti.iml" />
     </modules>
   </component>
 </project>
