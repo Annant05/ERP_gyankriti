@@ -1,6 +1,6 @@
 // The following constant has credentials for the AWS.
 const awsCredentialConfig = {
-    region: "ap-south-1",
+    region: "ap-south-1 ",
     // The endpoint should point to the local or remote computer where DynamoDB (downloadable) is running.
     endpoint: 'http://localhost:8000'
     // endpoint: 'https://dynamodb.us-east-1.amazonaws.com'

@@ -3,7 +3,7 @@ $(function () {
     // CREATE/POST
     $(".view-button").click(function () {
         var $item = $(this).closest("tr")   // Finds the closest row <tr>rs
-            .find(".nr")     // Gets a descendent with class="nr"
+            .find(".nr")     // Gets a descendant with class="nr"
             .text();         // Retrieves the text within <td>
 
         var $row = $(this).closest("tr");    // Find the row

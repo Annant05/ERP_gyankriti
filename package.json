@@ -14,7 +14,8 @@
     "jquery": "^3.3.1",
     "popups": "^1.1.3",
     "public-ip": "^2.4.0",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "body-parser": "latest"
   },
   "repository": {
     "type": "git",

@@ -162,7 +162,7 @@ router.post('/add', function (req, res) { // this function can be optimised
 //TODO: Implement this using AJAX and return response for better user experience.
     try {
         addNewStudent(req);
-        res.end("Data enter, Student added");
+        res.send("alert('Data enter, Student added')");
     } catch (err) {
         console.log(err);
     }

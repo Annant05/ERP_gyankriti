@@ -94,7 +94,7 @@
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last
                                         Name <span class="required">*</span>
                                     </label>
-                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="col-md-4ERP_gyankriti col-sm-4 col-xs-12">
                                         <input type="text" id="student-last-name"
                                                class="form-control col-md-7 col-xs-12"
                                                name="student[lastname]" required>
@@ -106,7 +106,8 @@
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender * </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                         <p>
-                                            Male : <input type="radio" class="flat" name="student[gender]" id="genderM"
+                                            Male : <input type="radio" class="flat" name="student[gender]"
+                                                          id="genderM"
                                                           value="male"
                                                           title="male"/>
                                             Female : <input type="radio" class="flat" name="student[gender]"
@@ -118,17 +119,12 @@
 
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">DOB *</label>
-                                    <div class="control-group col-md-4 col-sm-4 col-xs-12">
-                                        <fieldset>
-                                            <div class="controls">
-                                                <input type="text" class="form-control col-md-7  col-sm-7 col-xs-12"
-                                                       id="single_cal1" placeholder="" name="student[dob]"
-                                                       aria-describedby="inputSuccess2Status">
-                                            </div>
-                                        </fieldset>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <input type="date" class="col-md-7  col-sm-7 col-xs-12 no-spinner"
+                                               name="student[dob]" required>
                                     </div>
                                 </div>
-
+                                <!-- Student details form end -->
                                 <div class="ln_solid"></div>
 
 
@@ -151,11 +147,13 @@
                                 <br>
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="full-name">Name<span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                           for="full-name">Name<span
                                                 class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="text" id="father-name" class="form-control col-md-7 col-xs-12"
+                                        <input type="text" id="father-name"
+                                               class="form-control col-md-7 col-xs-12"
                                                name="father[name]" required>
                                     </div>
                                 </div>
@@ -166,20 +164,25 @@
                                         address <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="email" id="father-email" class="form-control col-md-7 col-xs-12"
+                                        <input type="email" id="father-email"
+                                               class="form-control col-md-7 col-xs-12"
                                                name="father[email]" required>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mobile-no">Mobile
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                           for="mobile-no">Mobile
                                         No <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="number" maxlength="10" minlength="10" id="father-mobile"
-                                               class="form-control col-md-7 col-xs-12" name="father[mobile]" required>
+                                        <input type="text" maxlength="10" minlength="10"
+                                               id="father-mobile"
+                                               class="form-control col-md-7 col-xs-12" name="father[mobile]"
+                                               required>
                                     </div>
+
                                 </div>
 
 
@@ -202,35 +205,41 @@
                                 <br>
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="mother-name">Name
-                                        <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                           for="mother-name">Name <span
                                                 class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="text" id="mother-name" class="form-control col-md-7 col-xs-12"
+                                        <input type="text" id="mother-name"
+                                               class="form-control col-md-7 col-xs-12"
                                                name="mother[name]" required>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Email
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                           for="last-name">Email
                                         address <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="email" id="mother-email" class="form-control col-md-7 col-xs-12"
+                                        <input type="email" id="mother-email"
+                                               class="form-control col-md-7 col-xs-12"
                                                name="mother[email]" required>
                                     </div>
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Mobile
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                           for="mobile-no">Mobile
                                         No <span class="required">*</span>
                                     </label>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
-                                        <input type="number" maxlength="10" minlength="10" id="mother-mobile"
-                                               class="form-control col-md-7 col-xs-12" name="mother[mobile]" required>
+                                        <input type="text" maxlength="10" minlength="10"
+                                               id="mother-mobile"
+                                               class="form-control col-md-7 col-xs-12" name="mother[mobile]"
+                                               required>
                                     </div>
                                 </div>
 
