@@ -3,6 +3,7 @@ const express = require("express"), app = express(); // creating express server
 const path = require('path');
 const request = require("request");
 const bodyParser = require("body-parser");  // used bodyparser to get data from all the field in form
+const db_server = require('./config/start_db');
 
 // Declaration related to servers
 const PORT = process.env.PORT || 8080;
@@ -29,6 +30,7 @@ app.get('/base-temp', function (req, res) {
     res.render('base-temp');
 });
 
+db_server.startDB();
 request('http://169.254.169.254/latest/meta-data/public-ipv4', function (error, response, body) {
     if (body !== undefined) console.log('server started on ip:port : http://' + body + ":" + PORT);
     else console.log('server started on ip:port : ' + 'http://localhost' + ":" + PORT);
